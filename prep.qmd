@@ -1,0 +1,5 @@
+# Data Preparation {.unnumbered}
+
+The purposes of thess pages are to help you clean, organize, and otherwise prepare and enhance your data for statistical analysis and/or visualization.
+
+------------------------------------------------------------------------

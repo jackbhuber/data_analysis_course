@@ -1,0 +1,129 @@
+# Scale development {.unnumbered}
+
+------------------------------------------------------------------------
+
+For your doctoral project, did you develop a questionnaire, for which you used Google Forms, Microsoft Forms, SurveyMonkey, or some other online data collection tool to collect data from a group of people?
+
+Did you write item sets using the same Likert scale and/or other items with response categories?
+
+Did you write multiple items intended to measure the same underlying thing?
+
+If your answer to all these questions, then one component of your data analysis is scale development.
+
+This means that -- much like a teacher or test developer might write test items, each response scored correct or incorrect, that sum into a total raw score -- you might combine responses from your Likert items into one or more summated rating scale(s).
+
+If so, then following are several things you need to do with your raw data. To illustrate each for you, I've prepared a toy data set of sample survey data [here](https://docs.google.com/spreadsheets/d/1y-RlDXs8nl2udZ-LR6XZ_zoFHGsYXP0nLnl7JlCNVsc/edit?usp=sharing). You might launch it in a separate window and use it as a visual to guide you through these steps.
+
+## Preparing your raw item response data
+
+### 1. If you have a Respondent ID, keep it.
+
+Like a Student ID or other personal ID number that is unique to the person, it is very helpful to have one value in your data that links all of a person's items responses together.
+
+### 2. If you have a timestamp field for each completed survey, keep it.
+
+Like a Respondent ID number, it's helpful to have a timestamp for the when the survey was completed.
+
+If it was impossible for a single respondent to take the survey multiple times, then from the timestamp you can calculate a serviceable Respondent ID number.
+
+### 3. Prepare workable column labels for your items.
+
+Data collection software often include the verbatim item wording as the column label.
+
+That may work for the canned tables and graphs the software provides for you but I find it unwieldy for actually working with the data.
+
+Suggestion: Make a new worksheet for a separate lookup table of item numbers and item wording, then apply the item numbers to your worksheet of clean item response data, like this.
+
+### 4. Replace your descriptive response categories with numeric values.
+
+If your raw data spreadsheet is filled with response categories like "Strongly Agree", "Agree", etc., then [for each item you need recode these response categories into numeric values]{.underline}.
+
+The numeric values you assign to these labels are important, because they assign an *order* or *quantitative* *meaning* to your response categories. Here is what I mean:
+
+> "The sky is blue."
+>
+> 1 = Strongly disagree, 2 = Disagree, 3 = Neutral, 4 = Agree, 5 = Strongly agree
+
+A higher value -- such as a higher mode, median, or mean - will now indicate *more* agreement with the statement.
+
+One good way to do this is to:
+
+1.  Make a copy worksheet of your original raw data worksheet. Label it something like "1 - Clean" to indicate that it's the first step in your workflow and is distinct from your original raw data.
+2.  Make sure all your Likert items are together on the spreadsheet.
+3.  Use Find - Replace to replace all "Strongly agree" with "1", "Agree" with 2, and so on.
+4.  I go a step further to apply the following conditional formatting: 1 = red, 2 = orange, 3 = yellow, 4 = green, 5 = blue.
+
+### 5. Do any necessary reverse coding of items.
+
+When you write sets of survey items that share the same 5-point Likert scale, some respondents may get tired of the survey and respond 4-4-4-4-4-4, in repetitive fashion, just to get it over with. That's called a "response set."
+
+One way to prevent these is to reverse word some items. Here is an example from my toy survey data set.
+
+> "I am reluctant to express my political views at this school, because I don't really feel heard."
+
+A higher value on this item conveys reluctance to express political views, rather than comfort.
+
+Surrounding items are all worded positively, so that a higher value conveys more comfort.
+
+In the raw data, this item therefore needs to be reverse coded, so that a higher value indicates disagreement, and therefore comfort expressive political views.
+
+There is a formula for reverse coding items in survey data:
+
+(Maximum item response + 1) - item response
+
+So if you're using a 5-point Likert scale, and your item is in Column B, then you would insert a new column, and in cell you would use the formula 6 - (value in B).
+
+### 6. Calculate total raw scores
+
+Once you have clean item response data, you can use the `=SUM()` formula to sum, for each survey respondent, the item responses into total raw scores. As an example, see [here](https://docs.google.com/spreadsheets/d/1y-RlDXs8nl2udZ-LR6XZ_zoFHGsYXP0nLnl7JlCNVsc/edit?usp=sharing).
+
+Now you can use this total raw score as an outcome variable in your survey analysis, investigating questions such as these:
+
+-   On a scale of X from (minimum) to (maximum), where did the average survey respondent score? Near the low end? Near the high end? In the middle?
+-   What does this distribution of this X look like? Is it skewed? Is it normal? Are people all in one place on it? Are people across the board on it?
+-   How do different groups compare on X? Do some groups tend to score higher than others?
+
+### 7. Validate your total raw scores
+
+OK.
+
+So, you *can* easily sum item responses into a total raw score. It's as easy as applying a `=SUM()` function to your data.
+
+But *should* you?
+
+What evidence do you have that the total raw score (whether of all your survey items or of specific item sets) is a meaningful and consistent sort of your respondents? 
+
+What evidence do you have that this total raw score is anything more than noise? 
+
+Do your responses to related items actually correlate well with each other?
+
+Questions like these take us into the realm of *measurement*, also known as *psychometrics*.
+
+And because this is not, strictly speaking, a course in measurement, many of these topics, though relevant, are beyond the scope of this course.
+
+But there are some easy, simple "poor person's psychometrics" things you can do with your item data to get a rough visual sense of correlation between your items, and you can see this in here in my toy data set of sample survey data.
+
+First, you can color code your raw item responses, as I have [here](https://docs.google.com/spreadsheets/d/1y-RlDXs8nl2udZ-LR6XZ_zoFHGsYXP0nLnl7JlCNVsc/edit?usp=sharing) with 1 = red, 2 = orange, 3 = yellow, 4 = green, and 5 = blue.
+
+Then, second, once you sum the responses to these 10 items across into a total raw score, sort the entire data set on that total raw score and conditional format that too.
+
+What do you see?
+
+When you look at survey respondents who scored low on your total raw score, what do their item responses look like? Are they similar colors? Are there any items that show divergent colors?
+
+Similarly, when you look at survey respondents who scored high on your total raw score, what do their item responses look like? Are they similar colors?
+
+This similarity of colors across different items is evidence of *covariation*, or *correlation*.
+
+Correlation is a statistic that measures strength of linear relationship between two continuous variables. If every response to one item perfectly corresponds to a specific response to another item, that's perfect prediction and is expressed as 1.0. If two items are totally unrelated to each other, that's a correlation of 0.
+
+Here's the third thing you can do to gather some validity evidence for your new measurement:
+
+To show you what these correlation statistics among the different items look like, I've calculated a correlation matrix among all the items in this toy survey. Have a look at that worksheet and see what you think. If you look closely, and are feeling adventurous, you can use it as a model for calculating a correlation matrix of your own survey data. 
+
+
+Why do this?
+
+Because the stronger the correlations among the items in your total raw score (whether of the entire survey or of specific item sets), the higher the quality of your total raw score. The more it is signal rather than noise.
+
+------------------------------------------------------------------------

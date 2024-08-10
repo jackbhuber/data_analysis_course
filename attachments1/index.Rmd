@@ -1,0 +1,56 @@
+---
+title: "THE SWEDISH PHARMACY RESIDENT RESEARCH PROJECT"
+author: 
+  - Jack B. Huber, Ph.D.
+  - Senior Clinical Data Analyst
+date: "`r format(Sys.Date(), '%B %Y')`"
+documentclass: report
+bibliography: [bibfile.bib,packages.bib]
+link-citations: yes
+output:
+  html_document:
+    theme: cerulean
+    # toc: yes
+    # number_sections: yes
+    # toc_float:
+    #   collapsed: yes
+    #   smooth_scroll: yes
+    citation_package: natbib
+    fig_caption: yes
+    # includes:
+      # in_header: logo.html
+---
+
+```{r eval=FALSE, echo=FALSE}
+  prettydoc::html_pretty:
+    theme: hpstr
+  pdf_document:
+    includes:
+      in_header: preamble.tex
+    latex_engine: xelatex
+    citation_package: natbib
+    keep_tex: yes
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::write_bib(c(.packages(),"knitr","pwr","rmarkdown","VIM"),"packages.bib")
+```
+
+---
+
+# Purpose of this Site
+
+The purpose of this site^[This site was built in `R` [@R-base] with `R Markdown` [@R-rmarkdown].] is to offer targeted advice and resources to support Swedish Pharmacy residents in their journey from project proposal to a completed research project.
+
+The menu above illustrates the organization of the resident research project and of this site. Like most research projects, the resident project goes through a sequence of phases or stages beginning with the planning and design of the project; evolving through middle stages of collecting, organizing, managing, and analyzing the data; and culminating in reporting the data in tables and graphs for manuscripts and visual presentation.
+
+Each page attempts to identify and deal with important issues that come up. This includes explanation, advice, and links to resources where available and appropriate.
+
+These pages are works in progress. The intent is for them to evolve in adaptation to the needs of this year's residents. I will continue to edit them as I see fit; and if something is missing, please don't hesitate to reach out to me: [jack.huber@swedish.org](mailto:jack.huber@swedish.org).^[A little bit [about me](AboutMe.html)[.](Projects.html)]
+
+---
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
+<div id="refs"></div>

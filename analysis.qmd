@@ -1,0 +1,6 @@
+# Data Analysis {.unnumbered}
+
+The purpose of this page is to give you tools to analyze your data using appropriate statistics. There are two important tasks:
+
+1.  Define the measurement levels of your variables.
+2.  Choose statistics appropriate for the measurement levels of your variables and the purpose of your analysis.

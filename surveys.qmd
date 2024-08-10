@@ -1,0 +1,34 @@
+# Analysis of Survey Data {.unnumbered}
+
+---
+
+Surveys may be one of the most often-used methods for collecting data on research or quality improvement projects. 
+
+Maybe this is because, like tests, they are efficient. They are a way to collect a large amount of information on a topic at fairly minimal cost. They can cover a lot of ground.
+
+They can be completed in less time than face-to-face interviews or focus groups.
+
+Cloud computing and tools like Google Forms make it possible to conduct surveys pretty much for free.
+
+And random sampling makes it possible to generalize information collected from a small sample of people to a large population of people.
+
+Surveys have their limitations. "Not everything that counts can be counted." People can lie on surveys. People can get tired of surveys and click 4-4-4-4-4 just to get it over with. Items can be ambiguous and add noise or bias to data.
+
+AND . . . 
+
+. . . sometimes we do want to sum up information from a group of people into a meaningful summary. 
+
+Sometimes we want to get some sense of scope or magnitude of an issue. 
+And sometimes we want to measure something abstract (but no less "real") that operates on a cultural level, somewhat at the periphery of our collective consciousness, that gives shape to our attitudes, thoughts, feelings, and behavior.
+
+Perhaps for some or all these reasons you used a survey to collect some standardized data.
+
+For that reason, I've assembled here some advice and a few tools to help you analyze your data.
+
+Here are two big things that should guide your thinking and analysis of your survey data:
+
+1. **Item analysis**. You'll want to summarize the information collected from each item, especially if one or more are especially important on their own.
+
+2. **Scale development**. If you wrote items to measure a concept, then you'll want to follow the conventions of combining your item sets into **rating scales** and then assessing the technical quality of those scales (reliability and validity). To the extent your scale(s) enjoy some evidence of quality, you can use them as variables in your analysis, and these analyses can vary from simple to very sophisticated.
+
+---

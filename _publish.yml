@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: a5c3172b-e475-4709-8473-9cd46970bc89
+      url: 'https://edld710.jackhuber.org'

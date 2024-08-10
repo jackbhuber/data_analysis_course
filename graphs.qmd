@@ -1,0 +1,25 @@
+# Best practices for graphs {.unnumbered}
+
+------------------------------------------------------------------------
+
+"Figures should be accurate, clear, and concise. As with tables, the figure with its title and legend should be understandable without undue reference to the text."[^graphs-1]
+
+[^graphs-1]: [From the AMA Style Guide, Section 4.2 on Figures](https://academic.oup.com/amamanualofstyle/book/27941/chapter/207563838)
+
+### 1. Line graphs for over-time data
+
+Line graphs are the appropriate way to show change over time in one or a few groups. Your x-axis (horizontal) should be time, and your y-axis should be the quantity by which you want to see change over time. You can use different lines for different groups.
+
+### 2. Bar graphs for group comparisons.
+
+The bar graph is the Swiss army knife of data visualization. It's useful because it is so versatile. Bar graphs use size to compare different quantities. Your y-axis is your quantity and on your x-axis you put your group categories.
+
+### 3. Save the pies for dessert
+
+Pie graphs are a great way to visualize proportions - parts that make up a whole. And, with a few nice colors, they're attractive. They're also simple.
+
+But they can be a pain to create - to get right visually. They also lose their utility when you have more than a few categories. For this reason, the AMA discourages the use of pie graphs:
+
+If you do want to use a pie graph, my advice to you is to keep it simple; use it only to show a few categories.
+
+------------------------------------------------------------------------

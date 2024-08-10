@@ -1,0 +1,75 @@
+---
+title: "DATA COLLECTION"
+bibliography: [bibfile.bib,packages.bib]
+link-citations: yes
+output:
+  html_document:
+    theme: cerulean
+    toc: yes
+    # number_sections: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+    citation_package: natbib
+    fig_caption: yes
+---
+
+The purpose of this page is to help you understand what is involved in collecting the data for your research project. Data collection is an important part of your project. You need _enough_ data to power the statistics you'll use down the road in your analysis. You also need _good, clean_ data.
+
+Some fraction of your data you may be able to collect, with my help, from "data mining" from Epic. I can write a SQL query that will produce for you a large amount of data in an Excel format. This will save you hours of time collecting individual data points in Hyperspace. But even some of this data from a big export you will need to verify with chart review. 
+
+Querying data from Epic is like _casting a net_, and if you do choose to partner with me to mine your data from Epic, it will be **iterative**. Our first efforts may not yield enough of the right patients, or will be missing important fields. From that first batch we'll learn how to fine tune your query to pull better data. After a few iterations, we'll dial your query in tight enough to pull just the right data every time.
+
+---
+
+# Epic databases
+
+When you're working in Epic, you're probably using Willow Inpatient. This is a Hyperspace application for your work on the front end. Hyperspace is not very useful for reporting (which arguably is not its primary purpose). For historical reporting, Epic has three databases on the back end:
+
+![](images/EpicDataLandscape.png)
+
+### Chronicles
+
+This is the database that is collecting data from Hyperspace in real time. For your purpose of reporting, **Reporting Workbench** is a data tool which pulls data directly from Chronicles. With some practice you may learn to use it to pull your patient list. Otherwise it is not very well designed for historical reporting.
+
+### Clarity
+
+Clarity is the primary relational database for reporting Epic data. Through a nightly process known as ETL (“extract-transform-load”), Clarity extracts data from Chronicles and stores them in a thousand bazillion **tables** (think spreadsheets all linked together). To pull data for a report from Clarity is to first identify the correct **fields** on the correct tables and then write a SQL query to join the tables, apply the appropriate selection criteria, and report the appropriate fields.
+
+### Caboodle
+
+Caboodle is a relatively new relational database for historical reporting. It functions essentially the same as Clarity but is designed to be much easier to use. Caboodle uses fewer tables which derived from the myriad Clarity tables. This vastly simplifies the work and complexity of writing a SQL query. The down side is not all Clarity data are in Caboodle.
+
+---
+
+# Sample queries for resident projects
+
+Having established this background, here are two examples of a SQL query for a resident project. Certainly nobody expects a resident to write their own SQL query to collect their data, these queries are worth a quick scan to see their basic structure.
+
+[Vancomycin dosing](VancoQuery.pdf)
+
+[Propofol dosing](PropofolQuery.pdf)
+
+The important thing is that the query is the **blueprint** for the data extract. It lays out:
+
+- which data fields will be reported in which order and format
+- what configuration of tables will serve as the source of the records
+- selection criteria governing which records will be included and excluded
+
+Once the query has been refined to satisfaction, it can easily be run and harvest the right data quickly.
+
+---
+
+# Prov applications for accessing Epic data
+
+There are several applications you can use to see or mine Epic data on your own. It may be worth your time to visit the [SharePoint page for the Providence Healthcare Intelligence ](https://providence4.sharepoint.com/sites/HealthcareIntelligence) team. This group manages our local instances of Epic databases and various data platforms. They offer various self-directed and instructor-led training webinars on several data platforms.
+
+### WEBi
+
+[Web Intelligence (WEBi)](https://providence4.sharepoint.com/sites/HIDataLiteracy/SitePages/WEBi.aspx) is a platform for self-service access to data. It uses an intuitive point-and-click graphical user interface through which you can build your own data extracts with fields and filtering criteria that you specify. When I came to Swedish two years ago, it was the first tool I learned and used to extract data, and it served very me well until I moved on to other tools. To gain access to it, you must (as I did) probably first [take a webinar led by one of the trainers from the Providence Healthcare Intelligence team](https://providence4.sharepoint.com/sites/HIDataLiteracy/SitePages/WEBi.aspx). 
+
+### SlicerDicer
+
+[SlicerDicer](https://providence4.sharepoint.com/sites/HIDataLiteracy/SitePages/SlicerDicer.aspx) is another Epic tool for self-service access to data. It's found in Hyperspace. It uses an intuitive point-and-click graphical user interface through which you can build your own data extracts with fields and filtering criteria that you specify. This you should already have access to, and it has an embedded tutorial to help you get up and running (and here is [another tutorial](https://providence4.sharepoint.com/:w:/r/sites/ProvidenceResearchNetwork2/_layouts/15/Doc.aspx?sourcedoc=%7B80634CE9-98A2-4867-A80E-7BCC82400D45%7D&file=Slicer%20Dicer%20Tutorial%20by%20Shane%20Rall.docx&action=default&mobileredirect=true)). It probably will not give you patient lists with complete data in the format you need, but it is helpful for exploring data and getting a sense of magnitude of different variables.
+
+---

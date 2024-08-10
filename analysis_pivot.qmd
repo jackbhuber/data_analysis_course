@@ -1,0 +1,29 @@
+# Learn to use Pivot Table {.unnumbered}
+
+------------------------------------------------------------------------
+
+Once your data collection is complete, and you have raw data, and you have a spreadsheet of clean data, then you are ready to begin analyzing your data.
+
+The first thing you should do is start exploring your variables. By this mean I explore how your participants (students, survey respondents, patients, etc.) are distributed across different categories of your variables.
+
+That's what variables are: groupings. They are tools for grouping people in order to make comparisons.
+
+And that's what quantitative data analysis boils down to: making interpretable comparisons.
+
+Therefore, the first tool for which you should reach from your toolbox is the Pivot Table.
+
+The Pivot Table uses your variables to group your participants into meaningful categories and summaries. The summaries can be as simple as counts of people in categories to more sophisticated statistics like averages and standard deviations of your continuous variables (like SBAC score, or score on your Grief scale).
+
+This is the place to begin for summarizing a single variable (a univariate analysis), or for exploring relationships between two (bivariate) or more variables (stick to just two for now). A good example of two variables is gender and SBAC score. If every student has a gender and an SBAC score, what does it look like when you group the students into these categories?
+
+The Pivot Table is your Swiss army knife of data analysis. Learn it, live it, love it.
+
+Excel and Google Sheets both have it.
+
+Always put the PivotTable on a fresh worksheet away from your raw data.
+
+Here are some examples of Pivot Table, used to summarize data from a recent student survey:
+
+[PivotTable](https://docs.google.com/spreadsheets/d/12iMxtPZuaP2QE3Gfe1tCXsjevRAgs6ocz5ZJQnWbOtM/edit?usp=sharing) ([here](https://docs.google.com/spreadsheets/d/1iqi0CMqZEsGZ2m96q0U4SZ27p5Hr_nkDb8XW1IhrdF0/edit?usp=sharing) is another good example)
+
+------------------------------------------------------------------------

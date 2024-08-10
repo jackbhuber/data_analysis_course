@@ -1,0 +1,21 @@
+# Best practices for tables {.unnumbered}
+
+------------------------------------------------------------------------
+
+Although data visualization has become all the rage, there is a still a place at the table for tables (sorry - bad pun - couldn't resist). Tables remain a concise way to present a sizable amount of quantitative data.
+
+I encourage you to strive for your tables to meet this standard: "A properly designed and constructed table should be able to stand independently, without requiring undue reference to the text."[^tables-2]
+
+[^tables-2]: [From Section 4.1 Tables, in AMA Style Guide](https://academic.oup.com/amamanualofstyle/book/27941/chapter/207563838)
+
+I encourage you to review the section on tables in the APA Style Guide.
+
+-   What goes on the far left column?
+-   How do I format the main column headings?
+-   How do I report p-values?
+-   How do I report my data?
+-   How do I align things?
+
+This article from @MillerEtAl2020 illustrates how to present a table that reports the results of a series of chi-square tests of the differences between two groups (pre-implementation and post-implementation) on categorical outcomes.
+
+Notice that the authors showed the independent variable (intervention group) as columns which enables us as readers to compare outcomes by reading left to right.

@@ -1,0 +1,15 @@
+# Resources for data prep {.unnumbered}
+
+------------------------------------------------------------------------
+
+Here are some additional resources to help you prepare your data:
+
+[Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham (a well-known data scientist), is a classic paper that defines what makes data clean (or "tidy") [@WickhamTidy]
+
+The University of New Hampshire Library has an excellent [research guide for using Excel](https://libraryguides.unh.edu/excel), including [data cleaning](https://libraryguides.unh.edu/excel/cleaning), [data analysis](https://libraryguides.unh.edu/excel/analysis), [data visualization](https://libraryguides.unh.edu/excel/visualization), and [spreadsheet best practices](https://libraryguides.unh.edu/excel/bestpractices).
+
+[Preparing Data in Excel](https://libraryguides.unh.edu/excel/bestpractices), from the University of Nebraska Medical Center College of Public Health, has an excellent set of guidelines for working with Excel
+
+[Introduction to Excel](https://lo.unisa.edu.au/mod/book/view.php?id=646440&chapterid=164660) is an excellent online module from the University of South Australia Research Methodologies and Statistics department.
+
+[Analysis Ready Datasets](https://datamanagement.hms.harvard.edu/analyze/analysis-ready-datasets) is an excellent resource from Harvard Medical School

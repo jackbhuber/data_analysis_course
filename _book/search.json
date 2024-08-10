@@ -2,29 +2,346 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "EDLD710",
+    "title": "Data Analysis for Problems of Practice",
     "section": "",
-    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "Purpose of this Site\nThe purpose of this site1 is to offer targeted advice and resources to help you analyze the quantitative data you have collected for your capstone project. It is an adaptation of a similar project to support pharmacy resident students with medical research project but much of the advice and information applies equally well to educational research.\nThe chapter structure to the left illustrates the organization of the site. Each page aims to identify and address important topics in the process of analyzing quantitative data. This includes explanation, advice, and links to resources where available and appropriate.\nThese pages are works in progress. I aim for them to evolve to meet your needs. I will continue to edit them as I see fit; and if something is missing, please don’t hesitate to reach out to me: jack.bernard.huber@gmail.com.",
+    "crumbs": [
+      "Purpose of this Site"
+    ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Data Analysis for Problems of Practice",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "This site was built in R (R Core Team 2022) with Quarto (Allaire 2022).↩︎",
+    "crumbs": [
+      "Purpose of this Site"
+    ]
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
+    "objectID": "prep_spreadsheet_format.html",
+    "href": "prep_spreadsheet_format.html",
+    "title": "Prepare your spreadsheet for analysis",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "The foundation of quantitative data analysis is the spreadsheet.\nThere are different software applications for working with spreadsheet data. One is Excel. Another is Google Sheets. Still another is Apple Numbers.\nWhatever tool you use, you need to ensure your data are clean before attempting any serious analysis.\nAs you work with your data, you may have a good sense of how clean it is, especially if you collected the data yourself.\nHere is a good example of clean data from a survey.\nHere are some principles of data cleaning to guide you:\nEach column should be one variable. As an example, one column might be gender. Another might be race.\nEach cell should contain only one piece of information. For example, if the column is age in years, each cell should contain only one value.\nUse a separate column for each piece of information. Don’t enter data such as “120/80” for blood pressure. Enter systolic blood pressure as one variable and diastolic blood pressure as another. Don’t enter data as “A,C,D” or “BDF” if there are three possible answers to a question. Include a separate column for each answer.\nEach row should be one observation. In most cases each row represents a person, such as a student, or a survey respondent, or a patient.\nPut variable names in the first row. Variables must start with a letter. Do not include special characters (#, !, ?, %, etc.) or spaces in your variable names. You can get away with underscores, such as, age_in_years.\nKeep all your data “touching”. No empty rows or columns. This is critically important for sorting. Empty columns or rows break the structural integrity of your data set and could allow you to sort a subsection of your data apart the rest of it.\nNo merged cells. This, too, makes sorting difficult.\nDecide on a “missingness” convention. Missing data can cause a multitude of problems. To enter a missing data value, either enter a blank or an “impossible” numeric code (for numbers) or an easily recognizable single digit character code for character (trying to avoid mixing numeric and character data). If you do use a missing value code (such as 9), be sure that it cannot be confused with a “real” data value.\nDedicate one worksheet to your original, unedited raw data. You might label this worksheet “Original” or “Raw data.” This is important so that when you make a mistake (and trust me you will), you always have your original data to fall back on.\nMake a copy of your raw data to do all your cleaning and analysis. Label this one “Clean_data.”\nDo all your analyses on different worksheets from your original raw data and your clean raw data sheets.\nTry to keep comparison groups and intervention groups in the same spreadsheet. For example, if you have “treated” and “non-treated” patients, or different groups of students, use a column variable such as Treated and assign each patient a code of “Yes” or “No.” If you have a pre- and a post group, keep all the people together (with the same columns) and identify each person as “Pre” or “Post.”\nMake the most of your header row of variable labels. On your worksheet of “Clean” (or “Working”) data, make sure every column of data has a clear, concise, descriptive label. Here’s what I do with my header row:\n\nEnsure that the top row of my data includes a clear, concise label for each column of data.\nBold the row.\nAdd a fill color to the row.\nFreeze the row (Select the row, then View –&gt; Freeze top row).\nEnable word wrap in the row.\n\nApply a consistent format for your columns. Data elements are different sizes. Names tend to be long while numerical values tend to be short. I don’t like it when a column label is left-aligned but the data are right-aligned; I find these variations in visual formatting distracting. To deal with these distractions, I usually:\n\nApply all the column label formatting mentioned above.\nFix all my column widths to 15.\nLeft align columns (both column labels and data) for text (patient names, medication names, etc.).\nCenter columns (both column labels and data) for numeric values.\nRight align columns for time data.\n\nLearn how to use PivotTable. Learn it, live it, love it. This is your Swiss army knife of data analysis. This is the tool you use to summarize your raw data into groups for comparison. Excel and Google Sheets both have it. Always put the PivotTable on a fresh worksheet away from your raw data.\nLook for weird values. For example, if one column contains values from a Likert scale ranging from 1 to 4 (or 5), sort on this column to look for out-of-range values. This is especially important if data were entered manually.\nI find (and I think you will too) that enforcing a consistent format turns down the noise of formatting so I can see and focus on the data.\nSo, clean your data! Take it to the next level of clean!\nYou will thank me.\nYou’re welcome.\n(mic drop)",
+    "crumbs": [
+      "Data Preparation",
+      "Prepare your spreadsheet for analysis"
+    ]
+  },
+  {
+    "objectID": "prep_spreadsheet_skills.html",
+    "href": "prep_spreadsheet_skills.html",
+    "title": "Review these spreadsheet skills",
+    "section": "",
+    "text": "Excel, Google Sheets, or Numbers are powerful tools. But you don’t know have to know everything about them to use them effectively to analyze the data you’ve collected.\nHere is a series of skills you will most likely need and use to analyze your data:\n\nHow to sort your data by the values of a column\nHow to filter your data based on specific values of one or more columns\nHow to “fill down” a column\nHow to analyze your data in PivotTable (here is another good example)\nHow to match data from different sources together using the VLOOKUP formula (here is a tool for you)\nHow to add color to cells based on their values using conditional formatting\nHow to perform basic calculations like SUM, AVG, COUNTIF, etc.\nHow to stitch together text and values from different data columns into a new column using CONCATENATE",
+    "crumbs": [
+      "Data Preparation",
+      "Review these spreadsheet skills"
+    ]
+  },
+  {
+    "objectID": "prep_more_resources.html",
+    "href": "prep_more_resources.html",
+    "title": "Resources for data prep",
+    "section": "",
+    "text": "Here are some additional resources to help you prepare your data:\nTidy Data, by Hadley Wickham (a well-known data scientist), is a classic paper that defines what makes data clean (or “tidy”) (Wickham 2014)\nThe University of New Hampshire Library has an excellent research guide for using Excel, including data cleaning, data analysis, data visualization, and spreadsheet best practices.\nPreparing Data in Excel, from the University of Nebraska Medical Center College of Public Health, has an excellent set of guidelines for working with Excel\nIntroduction to Excel is an excellent online module from the University of South Australia Research Methodologies and Statistics department.\nAnalysis Ready Datasets is an excellent resource from Harvard Medical School\n\n\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of Statistical Software 59 (10). https://www.jstatsoft.org/article/view/v059i10.",
+    "crumbs": [
+      "Data Preparation",
+      "Resources for data prep"
+    ]
+  },
+  {
+    "objectID": "analysis_measurement_levels.html",
+    "href": "analysis_measurement_levels.html",
+    "title": "Know the measurement levels of your variables",
+    "section": "",
+    "text": "Nominal\nNominal measurement is categories.\nEach student (or patient) must fall into only one category. The categories must be also mutually exclusive and exhaustive. Here are some examples:\nNominal outcomes are usually reported as frequency counts or percentages (in each category), or, counts of people in different buckets.\nI hope it is obvious that you cannot perform arithmetic on categorical data. It makes no sense to “average” gender or marital status.\nBut you can report percent of your sample in different buckets. If your outcome variable is categorical, you can study what percent of people end up in one category or another.\nAs an example from education, you can study what factors influence how many students ultimately meet a proficiency standard.",
+    "crumbs": [
+      "Data Analysis",
+      "Know the measurement levels of your variables"
+    ]
+  },
+  {
+    "objectID": "analysis_measurement_levels.html#nominal",
+    "href": "analysis_measurement_levels.html#nominal",
+    "title": "Know the measurement levels of your variables",
+    "section": "",
+    "text": "Gender (Male/Female)\nRacial identity (White/nonwhite)\nMarital status (Married/non-married)\nControl group/Experimental group\nInfected with COVID-19 vs. not infected with COVID-19\nDisease presence\nMortality (Alive/Deceased)\nProficiency (Below standard / Meets or exceeds standard)",
+    "crumbs": [
+      "Data Analysis",
+      "Know the measurement levels of your variables"
+    ]
+  },
+  {
+    "objectID": "analysis_measurement_levels.html#ordinal",
+    "href": "analysis_measurement_levels.html#ordinal",
+    "title": "Know the measurement levels of your variables",
+    "section": "Ordinal",
+    "text": "Ordinal\nOrdinal measure also puts people into categories, but the categories have an ascending or descending order: people have more or less of something.\nConsider student work that is scored on a rubric from 1 to 4. Student work scored with 4 demonstrates more of what the scorer is looking for than work scored a 3. Rubrics often have verbal descriptions of desired qualities, and a higher value declares that work possesses more of these desired qualities.\nBut the differences between the categories are not necessarily the same.\nA score of 4 is more proficient than a score of 2 – but not necessarily by two times as much.\nHere are some examples from medicine:\n\nStages I-IV tumors\n0-10 Apgar scores\n\nA Stage IV tumor is more advanced than a Stage II tumor, but not necessarily by twice as much. A Stage III tumor is more advanced than a Stage I tumor, but not necessarily by three times as much.\nAgain, we cannot perform arithmetic on ordinal data. We cannot subtract ordinal data and get meaningful difference scores. Nor can we calculate means or other parametric statistics on ordinal data.\nBut we can express ordinal data in categories. We can report percent of students who scored at SBAC Levels 1, 2, 3, and 4.\nHowever, if your project has an ordinal outcome on which you need to compare treatment groups, there are appropriate nonparametric statistics you can use to see which group is significantly more of this outcome than another. Examples include:\n\nchi-square \\(\\chi 2\\) statistics\nthe Mann-Whitney U test\nthe Spearman’s rho test\n\nLikert scales fall into this category. Consider\n\nStrongly disagree\nDisagree\nAgree\nStrongly agree",
+    "crumbs": [
+      "Data Analysis",
+      "Know the measurement levels of your variables"
+    ]
+  },
+  {
+    "objectID": "analysis_measurement_levels.html#interval-and-ratio",
+    "href": "analysis_measurement_levels.html#interval-and-ratio",
+    "title": "Know the measurement levels of your variables",
+    "section": "Interval and ratio",
+    "text": "Interval and ratio\nFinally, interval and ratio measurement means continuous data.\nThis means people fall along a continuum, like a temperature scale. Or, to use an example from education, a score scale, like that of the Smarter Balanced score scale, or the MAP RIT scale.\nVariables measured using interval and ratio scales are often referred to as continuous variables. Here are some examples:\n\nHeight\nWeight\nCholesterol level\nBlood pressure\nTime\nSBAC scale score\nRIT score\nGPA\n\nOn variables like these there is relative positioning with no gaps or interruptions in the continuum.\nThe difference between interval and ratio scales is that ratio has a true zero value while interval does not.\nOn variables like these we can do arithmetic and summarize them with the mean and standard deviation which in turn avail to you more commonly used advanced statistics like:\n\nt tests\nanalyses of variance (ANOVA)\ncorrelation\nregression\n\nOnce you have a good feel for the measurement levels of your outcome and predictor variables, you can choose appropriate statistics. Simpson (2015) offers two decision trees to help you make these choices:\n \n\n\n\n\n\nDe Muth, James E. 2009. “Overview of Biostatistics Used in Clinical Research.” American Journal of Health-System Pharmacy 66: 70–81.\n\n\nSimpson, Scot. 2015. “Creating a Data Analysis Plan: What to Consider When Choosing Statistics for a Study.” Canadian Journal of Hospital Pharmacy 68 (4): 311–17.",
+    "crumbs": [
+      "Data Analysis",
+      "Know the measurement levels of your variables"
+    ]
+  },
+  {
+    "objectID": "analysis_univariate.html",
+    "href": "analysis_univariate.html",
+    "title": "Explore your variables with univariate analyses",
+    "section": "",
+    "text": "Once you have data in hand, the first thing you should do is explore your data. By this mean do univariate analyses of each variable in its own right.\nIf you have categorical data (people in categories):\n\nRun frequencies to see where people are in your categories. Which are the largest categories? Which are the smallest categories? One way you might do this is by using PivotTable in Excel.\n\nIf you have ordinal data (people in categories where some categories are “more than” others):\n\nDo frequencies to see how people are distributed. What is the median of these variables? Remember that central tendency is one number that summarizes the group of numbers. What does this value mean in real world terms?\n\nIf you have interval or ratio data (people have a place on a temperature-like scale):\n\nRun measures of central tendency like average. What is the one number that summarizes the group of numbers? What does this mean in practical real-world terms?\nBut don’t sleep dispersion! Everyone understands average, but equally important is spread variation away from the average. Find the standard deviation of your variables and think of this as “deviation of the average person away from the average.” Then how large is this spread? Are people all over the place? Or are they tightly clustered around the average (and thus pretty much on the same page). What does this mean in practical real world terms?\nThen there is skew. Where do people stack up? Is your distribution lopsided? This is a problem if you want to run parametric statistics (like correlation) because they assume normal distributions. But what might a lopsided distribution mean for your project in real, practical terms?",
+    "crumbs": [
+      "Data Analysis",
+      "Explore your variables with univariate analyses"
+    ]
+  },
+  {
+    "objectID": "analysis_pivot.html",
+    "href": "analysis_pivot.html",
+    "title": "Learn to use Pivot Table",
+    "section": "",
+    "text": "Once your data collection is complete, and you have raw data, and you have a spreadsheet of clean data, then you are ready to begin analyzing your data.\nThe first thing you should do is start exploring your variables. By this mean I explore how your participants (students, survey respondents, patients, etc.) are distributed across different categories of your variables.\nThat’s what variables are: groupings. They are tools for grouping people in order to make comparisons.\nAnd that’s what quantitative data analysis boils down to: making interpretable comparisons.\nTherefore, the first tool for which you should reach from your toolbox is the Pivot Table.\nThe Pivot Table uses your variables to group your participants into meaningful categories and summaries. The summaries can be as simple as counts of people in categories to more sophisticated statistics like averages and standard deviations of your continuous variables (like SBAC score, or score on your Grief scale).\nThis is the place to begin for summarizing a single variable (a univariate analysis), or for exploring relationships between two (bivariate) or more variables (stick to just two for now). A good example of two variables is gender and SBAC score. If every student has a gender and an SBAC score, what does it look like when you group the students into these categories?\nThe Pivot Table is your Swiss army knife of data analysis. Learn it, live it, love it.\nExcel and Google Sheets both have it.\nAlways put the PivotTable on a fresh worksheet away from your raw data.\nHere are some examples of Pivot Table, used to summarize data from a recent student survey:\nPivotTable (here is another good example)",
+    "crumbs": [
+      "Data Analysis",
+      "Learn to use Pivot Table"
+    ]
+  },
+  {
+    "objectID": "analysis_bivariate.html",
+    "href": "analysis_bivariate.html",
+    "title": "Statistics for bivariate analyses",
+    "section": "",
+    "text": "Here are two statistics for bivariate (two variable) analyses:\n\nChi-square \\(\\chi 2\\) tests of association\nThe chi-square \\(\\chi 2\\) test is a commonly used statistic for nominal/categorical data. We use it to examine the distribution of cases across categories. Essentially, it compares the distribution of cases you actually see to the distribution of cases you would expect to see from normal variation.\nHere is one example of a chi-square \\(\\chi 2\\) test for a recent resident project. The question is whether gender (male/female) makes a statistically significant difference in whether patients need three or more dose changes of bivalirudin before they reach a therapeutic goal.\n\n#d &lt;- read.csv(\"data/bivalirudin.csv\") # load data\n#table_dosechgs_gender &lt;- xtabs(~d$d_Male + d$DV_3DoseChanges, data=d) # crosstabulate \n#knitr::kable(table_dosechgs_gender, align = \"l\")\n#summary(table_dosechgs_gender) # calculate chi-square\n\nThe chi-square \\(\\chi 2\\) value of 1.9421 with one degree of freedom has a p-value of 0.1634. It is not statistically significant, suggesting that gender makes no significant difference in reaching therapeutic goal.\n\n\nt tests\nThe t test is a commonly used statistic for comparing two groups on a continuous outcome.",
+    "crumbs": [
+      "Data Analysis",
+      "Statistics for bivariate analyses"
+    ]
+  },
+  {
+    "objectID": "analysis_more_resources.html",
+    "href": "analysis_more_resources.html",
+    "title": "External resources for data analysis",
+    "section": "",
+    "text": "Here are a few links to external resources on data analysis and statistics.\n\nThe R Psychologist, by @magnussonCohend - is an outstanding resource to better understand statistics\nOnline Modules in Research Methods and Data Analysis at the University of South Australia\nData Analysis from the University of New Hampshire",
+    "crumbs": [
+      "Data Analysis",
+      "External resources for data analysis"
+    ]
+  },
+  {
+    "objectID": "analysis_tools.html",
+    "href": "analysis_tools.html",
+    "title": "Software for data analysis",
+    "section": "",
+    "text": "Excel-based tools",
+    "crumbs": [
+      "Data Analysis",
+      "Software for data analysis"
+    ]
+  },
+  {
+    "objectID": "analysis_tools.html#excel-based-tools",
+    "href": "analysis_tools.html#excel-based-tools",
+    "title": "Software for data analysis",
+    "section": "",
+    "text": "EZAnalyze is a simple Excel add-in for data analysis. It includes menus for selecting various statistics from your variables.\nXLStat\nData Analysis native add-in",
+    "crumbs": [
+      "Data Analysis",
+      "Software for data analysis"
+    ]
+  },
+  {
+    "objectID": "analysis_tools.html#google-sheets-tools",
+    "href": "analysis_tools.html#google-sheets-tools",
+    "title": "Software for data analysis",
+    "section": "Google Sheets tools",
+    "text": "Google Sheets tools",
+    "crumbs": [
+      "Data Analysis",
+      "Software for data analysis"
+    ]
+  },
+  {
+    "objectID": "analysis_tools.html#data-analysis-software",
+    "href": "analysis_tools.html#data-analysis-software",
+    "title": "Software for data analysis",
+    "section": "Data analysis software",
+    "text": "Data analysis software\n\nR @R-base, with RStudio and R Markdown, is free open source software for data analysis, statistics, and data visualization. It is powerful and flexible but it does require ongoing learning of code which is constantly evolving. I use R for my own statistical work, and I’ve built this website in Quarto, a platform for building documents, books, presentations, websites, and dashboards in R, Python and more.\n\nHere are several other robust software applications for data analysis available to you. One or more of them may be free for you as a Gonzaga student:\n\nJMP - JMP is a suite of software used for statistical analysis\nSAS - The SAS System is a comprehensive statistical software package from SAS Institute for data management, graphics, analysis, and presentation\nSPSS - IBM SPSS (Statistical Package for the Social Sciences) provides data and statistical analysis, file management capabilities, graphics and reporting features",
+    "crumbs": [
+      "Data Analysis",
+      "Software for data analysis"
+    ]
+  },
+  {
+    "objectID": "item_analysis.html",
+    "href": "item_analysis.html",
+    "title": "Item analysis",
+    "section": "",
+    "text": "Frequencies (and percents)\nThis means group your respondents into the response categories. How many strongly disagreed? Disagreed? Agreed? Strongly agreed?\nYou can use raw counts and percents of the sample.\nIf your item captured only categorical data (like race or gender), then this is pretty much all you can do.\nIf you collected your data using a questionnaire tool like Google Forms, Microsoft Forms, or SurveyMonkey, you may already have this information in abundance. Software platforms like this do a great job of summarizing item data with frequency tables and vivid charts.",
+    "crumbs": [
+      "Analysis of Survey Data",
+      "Item analysis"
+    ]
+  },
+  {
+    "objectID": "item_analysis.html#frequencies-and-percents",
+    "href": "item_analysis.html#frequencies-and-percents",
+    "title": "Item analysis",
+    "section": "",
+    "text": "An aside about pie charts\nPie charts, like pies, are much more fun to consume (when they’re done well) than to make. Try making more one pie graph from any data set on your own and you’ll probably agree.\nBut pie charts are an excellent way to make sense of univariate item data featuring percents.",
+    "crumbs": [
+      "Analysis of Survey Data",
+      "Item analysis"
+    ]
+  },
+  {
+    "objectID": "item_analysis.html#classical-item-statistics",
+    "href": "item_analysis.html#classical-item-statistics",
+    "title": "Item analysis",
+    "section": "Classical item statistics",
+    "text": "Classical item statistics\nWherever you used Likert scales, you have continuous data. This avails to you classical item statistics.\nThis includes measures of central tendency such as means, medians, and modes. Think of these as one value that tries to faithfully summarize a set of values.\nBut don’t sleep dispersion. This means includes the standard deviation and by extension, variance. Think of this as one value that summarizes how much dispersion or variation there is in your measurement.\nYou’ll also want to look at skew and kurtosis. These are important because they tell you how balanced or lop-sided your data are.\nTo see an example of all of this, check out the Item Statistics worksheets in the toy survey data set I created for this section.",
+    "crumbs": [
+      "Analysis of Survey Data",
+      "Item analysis"
+    ]
+  },
+  {
+    "objectID": "item_analysis.html#how-to-do-item-analysis",
+    "href": "item_analysis.html#how-to-do-item-analysis",
+    "title": "Item analysis",
+    "section": "How to do item analysis",
+    "text": "How to do item analysis\nAs mentioned above, if you used survey software that gives you item frequencies, percents, and bar or pie charts of these same values . . . and if these univariate item data alone seem to answer your research questions . . . then your next tasks are:\n\nHow to copy the output to your document\nBegin writing to make sense of the results in light of your research questions\n\nYou can also do most if not all of what I’ve described here in Pivot Table.",
+    "crumbs": [
+      "Analysis of Survey Data",
+      "Item analysis"
+    ]
+  },
+  {
+    "objectID": "item_analysis.html#the-bottom-line",
+    "href": "item_analysis.html#the-bottom-line",
+    "title": "Item analysis",
+    "section": "The Bottom Line",
+    "text": "The Bottom Line\nMost importantly: What do you learn from the item results in relation to the big guiding questions of your investigation?\nDo the item results surprise you? If so, why?\nDo the item results confirm what you expected?",
+    "crumbs": [
+      "Analysis of Survey Data",
+      "Item analysis"
+    ]
+  },
+  {
+    "objectID": "scale_development.html",
+    "href": "scale_development.html",
+    "title": "Scale development",
+    "section": "",
+    "text": "Preparing your raw item response data",
+    "crumbs": [
+      "Analysis of Survey Data",
+      "Scale development"
+    ]
+  },
+  {
+    "objectID": "scale_development.html#preparing-your-raw-item-response-data",
+    "href": "scale_development.html#preparing-your-raw-item-response-data",
+    "title": "Scale development",
+    "section": "",
+    "text": "1. If you have a Respondent ID, keep it.\nLike a Student ID or other personal ID number that is unique to the person, it is very helpful to have one value in your data that links all of a person’s items responses together.\n\n\n2. If you have a timestamp field for each completed survey, keep it.\nLike a Respondent ID number, it’s helpful to have a timestamp for the when the survey was completed.\nIf it was impossible for a single respondent to take the survey multiple times, then from the timestamp you can calculate a serviceable Respondent ID number.\n\n\n3. Prepare workable column labels for your items.\nData collection software often include the verbatim item wording as the column label.\nThat may work for the canned tables and graphs the software provides for you but I find it unwieldy for actually working with the data.\nSuggestion: Make a new worksheet for a separate lookup table of item numbers and item wording, then apply the item numbers to your worksheet of clean item response data, like this.\n\n\n4. Replace your descriptive response categories with numeric values.\nIf your raw data spreadsheet is filled with response categories like “Strongly Agree”, “Agree”, etc., then for each item you need recode these response categories into numeric values.\nThe numeric values you assign to these labels are important, because they assign an order or quantitative meaning to your response categories. Here is what I mean:\n\n“The sky is blue.”\n1 = Strongly disagree, 2 = Disagree, 3 = Neutral, 4 = Agree, 5 = Strongly agree\n\nA higher value – such as a higher mode, median, or mean - will now indicate more agreement with the statement.\nOne good way to do this is to:\n\nMake a copy worksheet of your original raw data worksheet. Label it something like “1 - Clean” to indicate that it’s the first step in your workflow and is distinct from your original raw data.\nMake sure all your Likert items are together on the spreadsheet.\nUse Find - Replace to replace all “Strongly agree” with “1”, “Agree” with 2, and so on.\nI go a step further to apply the following conditional formatting: 1 = red, 2 = orange, 3 = yellow, 4 = green, 5 = blue.\n\n\n\n5. Do any necessary reverse coding of items.\nWhen you write sets of survey items that share the same 5-point Likert scale, some respondents may get tired of the survey and respond 4-4-4-4-4-4, in repetitive fashion, just to get it over with. That’s called a “response set.”\nOne way to prevent these is to reverse word some items. Here is an example from my toy survey data set.\n\n“I am reluctant to express my political views at this school, because I don’t really feel heard.”\n\nA higher value on this item conveys reluctance to express political views, rather than comfort.\nSurrounding items are all worded positively, so that a higher value conveys more comfort.\nIn the raw data, this item therefore needs to be reverse coded, so that a higher value indicates disagreement, and therefore comfort expressive political views.\nThere is a formula for reverse coding items in survey data:\n(Maximum item response + 1) - item response\nSo if you’re using a 5-point Likert scale, and your item is in Column B, then you would insert a new column, and in cell you would use the formula 6 - (value in B).\n\n\n6. Calculate total raw scores\nOnce you have clean item response data, you can use the =SUM() formula to sum, for each survey respondent, the item responses into total raw scores. As an example, see here.\nNow you can use this total raw score as an outcome variable in your survey analysis, investigating questions such as these:\n\nOn a scale of X from (minimum) to (maximum), where did the average survey respondent score? Near the low end? Near the high end? In the middle?\nWhat does this distribution of this X look like? Is it skewed? Is it normal? Are people all in one place on it? Are people across the board on it?\nHow do different groups compare on X? Do some groups tend to score higher than others?\n\n\n\n7. Validate your total raw scores\nOK.\nSo, you can easily sum item responses into a total raw score. It’s as easy as applying a =SUM() function to your data.\nBut should you?\nWhat evidence do you have that the total raw score (whether of all your survey items or of specific item sets) is a meaningful and consistent sort of your respondents?\nWhat evidence do you have that this total raw score is anything more than noise?\nDo your responses to related items actually correlate well with each other?\nQuestions like these take us into the realm of measurement, also known as psychometrics.\nAnd because this is not, strictly speaking, a course in measurement, many of these topics, though relevant, are beyond the scope of this course.\nBut there are some easy, simple “poor person’s psychometrics” things you can do with your item data to get a rough visual sense of correlation between your items, and you can see this in here in my toy data set of sample survey data.\nFirst, you can color code your raw item responses, as I have here with 1 = red, 2 = orange, 3 = yellow, 4 = green, and 5 = blue.\nThen, second, once you sum the responses to these 10 items across into a total raw score, sort the entire data set on that total raw score and conditional format that too.\nWhat do you see?\nWhen you look at survey respondents who scored low on your total raw score, what do their item responses look like? Are they similar colors? Are there any items that show divergent colors?\nSimilarly, when you look at survey respondents who scored high on your total raw score, what do their item responses look like? Are they similar colors?\nThis similarity of colors across different items is evidence of covariation, or correlation.\nCorrelation is a statistic that measures strength of linear relationship between two continuous variables. If every response to one item perfectly corresponds to a specific response to another item, that’s perfect prediction and is expressed as 1.0. If two items are totally unrelated to each other, that’s a correlation of 0.\nHere’s the third thing you can do to gather some validity evidence for your new measurement:\nTo show you what these correlation statistics among the different items look like, I’ve calculated a correlation matrix among all the items in this toy survey. Have a look at that worksheet and see what you think. If you look closely, and are feeling adventurous, you can use it as a model for calculating a correlation matrix of your own survey data.\nWhy do this?\nBecause the stronger the correlations among the items in your total raw score (whether of the entire survey or of specific item sets), the higher the quality of your total raw score. The more it is signal rather than noise.",
+    "crumbs": [
+      "Analysis of Survey Data",
+      "Scale development"
+    ]
+  },
+  {
+    "objectID": "graphs.html",
+    "href": "graphs.html",
+    "title": "Best practices for graphs",
+    "section": "",
+    "text": "1. Line graphs for over-time data\nLine graphs are the appropriate way to show change over time in one or a few groups. Your x-axis (horizontal) should be time, and your y-axis should be the quantity by which you want to see change over time. You can use different lines for different groups.",
+    "crumbs": [
+      "Data Presentation",
+      "Best practices for graphs"
+    ]
+  },
+  {
+    "objectID": "graphs.html#footnotes",
+    "href": "graphs.html#footnotes",
+    "title": "Best practices for graphs",
+    "section": "",
+    "text": "From the AMA Style Guide, Section 4.2 on Figures↩︎",
+    "crumbs": [
+      "Data Presentation",
+      "Best practices for graphs"
+    ]
+  },
+  {
+    "objectID": "tables.html#footnotes",
+    "href": "tables.html#footnotes",
+    "title": "Best practices for tables",
+    "section": "",
+    "text": "From Section 4.1 Tables, in AMA Style Guide↩︎",
+    "crumbs": [
+      "Data Presentation",
+      "Best practices for tables"
+    ]
   },
   {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Allaire, JJ. 2022. R Interface to ’Quarto’ Markdown Publishing\nSystem. https://cran.r-project.org/web/packages/quarto/quarto.pdf.\n\n\nDe Muth, James E. 2009. “Overview of Biostatistics Used in\nClinical Research.” American Journal of Health-System\nPharmacy 66: 70–81.\n\n\nMiller, Daryl, Melissa Ramsey, Timothy R. L’Hommedieu, and Lauren\nVerbosky. 2020. “Pharmacist-Led Transitions-of-Care Program\nReduces 30-Day Readmission Rates for Medicare Patients in a Large Health\nSystem.” American Journal of Health-System Pharmacy 77:\n972–78.\n\n\nR Core Team. 2022. R: A Language and Environment for Statistical\nComputing. Vienna, Austria: R Foundation for Statistical Computing.\nhttps://www.R-project.org/.\n\n\nSimpson, Scot. 2015. “Creating a Data Analysis Plan: What to\nConsider When Choosing Statistics for a Study.” Canadian\nJournal of Hospital Pharmacy 68 (4): 311–17.\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of\nStatistical Software 59 (10). https://www.jstatsoft.org/article/view/v059i10.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "prep.html",
+    "href": "prep.html",
+    "title": "Data Preparation",
+    "section": "",
+    "text": "The purposes of thess pages are to help you clean, organize, and otherwise prepare and enhance your data for statistical analysis and/or visualization.",
+    "crumbs": [
+      "Data Preparation"
+    ]
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "The purpose of this page is to give you tools to analyze your data using appropriate statistics. There are two important tasks:\n\nDefine the measurement levels of your variables.\nChoose statistics appropriate for the measurement levels of your variables and the purpose of your analysis.",
+    "crumbs": [
+      "Data Analysis"
+    ]
+  },
+  {
+    "objectID": "Reporting.html",
+    "href": "Reporting.html",
+    "title": "Data Presentation",
+    "section": "",
+    "text": "The purpose of this final page is to help you decide how best to package and present the results of your data analysis for a professional audience.",
+    "crumbs": [
+      "Data Presentation"
+    ]
+  },
+  {
+    "objectID": "surveys.html",
+    "href": "surveys.html",
+    "title": "Analysis of Survey Data",
+    "section": "",
+    "text": "Surveys may be one of the most often-used methods for collecting data on research or quality improvement projects.\nMaybe this is because, like tests, they are efficient. They are a way to collect a large amount of information on a topic at fairly minimal cost. They can cover a lot of ground.\nThey can be completed in less time than face-to-face interviews or focus groups.\nCloud computing and tools like Google Forms make it possible to conduct surveys pretty much for free.\nAnd random sampling makes it possible to generalize information collected from a small sample of people to a large population of people.\nSurveys have their limitations. “Not everything that counts can be counted.” People can lie on surveys. People can get tired of surveys and click 4-4-4-4-4 just to get it over with. Items can be ambiguous and add noise or bias to data.\nAND . . .\n. . . sometimes we do want to sum up information from a group of people into a meaningful summary.\nSometimes we want to get some sense of scope or magnitude of an issue. And sometimes we want to measure something abstract (but no less “real”) that operates on a cultural level, somewhat at the periphery of our collective consciousness, that gives shape to our attitudes, thoughts, feelings, and behavior.\nPerhaps for some or all these reasons you used a survey to collect some standardized data.\nFor that reason, I’ve assembled here some advice and a few tools to help you analyze your data.\nHere are two big things that should guide your thinking and analysis of your survey data:\n\nItem analysis. You’ll want to summarize the information collected from each item, especially if one or more are especially important on their own.\nScale development. If you wrote items to measure a concept, then you’ll want to follow the conventions of combining your item sets into rating scales and then assessing the technical quality of those scales (reliability and validity). To the extent your scale(s) enjoy some evidence of quality, you can use them as variables in your analysis, and these analyses can vary from simple to very sophisticated.",
+    "crumbs": [
+      "Analysis of Survey Data"
+    ]
   }
 ]

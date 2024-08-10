@@ -1,0 +1,78 @@
+# Item analysis {.unnumbered}
+
+------------------------------------------------------------------------
+
+If you did a survey, I suspect you were painstaking in your writing of items.
+
+You took care to keep the items short and simple, to not confuse or overwhelm your respondent with the lofty concepts in your mind.
+
+You were careful with language, to keep your items free of professional jargon or terms unfamiliar to most respondents.
+
+You were probably careful with bias, wording each item to solicit the full range of thoughts on a matter and not "lead" your respondent one way or another by implicitly conveying a preferred response.
+
+Your purpose was not to "teach" the respondent, but to collect input, and maximize variation.
+
+Many surveys are "fact finding" surveys geared to gauging reactions to some collection of facts or conceptions: "Here's X!": Agree? Disagree? (Phil Donohue pointing the mic).
+
+But maybe your survey went deeper: to measure things. You wrote sets of items intended to work together to measure a latent concept like *grief literacy*.
+
+Maybe you wrote survey items like a teacher would write test items: to work together to measure proficiency or mastery of knowledge, skills, and abilities.
+
+(In this sense, I think of tests and surveys as siblings sharing DNA in a family of standardized data collection instruments. In that sense, my doctoral work in the psychometrics of tests was not so different from my sociology work with large surveys. But I digress...)
+
+OK. So you have a set of good items, perhaps many if not most of which used the same 5-point Likert scale. And you have a spreadsheet of raw item response data.
+
+Now what?
+
+Item analysis.
+
+You're ready to summarize your raw item response data in to item statistics, to see what the item has to convey about your participants.
+
+There are two forms of item analysis you will want to explore.
+
+## Frequencies (and percents)
+
+This means group your respondents into the response categories. How many strongly disagreed? Disagreed? Agreed? Strongly agreed?
+
+You can use raw counts and percents of the sample.
+
+If your item captured only categorical data (like race or gender), then this is pretty much all you can do.
+
+If you collected your data using a questionnaire tool like Google Forms, Microsoft Forms, or SurveyMonkey, you may already have this information in abundance. Software platforms like this do a great job of summarizing item data with frequency tables and vivid charts.
+
+### An aside about pie charts
+
+Pie charts, like pies, are much more fun to consume (when they're done well) than to make. Try making more one pie graph from any data set on your own and you'll probably agree. 
+
+But pie charts are an excellent way to make sense of univariate item data featuring percents.
+
+## Classical item statistics
+
+Wherever you used Likert scales, you have continuous data. This avails to you **classical item statistics**. 
+
+This includes **measures of central tendency** such as **means**, **medians**, and **modes**. Think of these as one value that tries to faithfully summarize a set of values.
+
+But don't sleep **dispersion**. This means includes the **standard deviation** and by extension, **variance**. Think of this as one value that summarizes how much dispersion or variation there is in your measurement. 
+
+You'll also want to look at **skew** and **kurtosis**. These are important because they tell you how balanced or lop-sided your data are.
+
+To see an example of all of this, check out the [Item Statistics worksheets](https://docs.google.com/spreadsheets/d/1y-RlDXs8nl2udZ-LR6XZ_zoFHGsYXP0nLnl7JlCNVsc/edit?usp=sharing) in the [toy survey data set](https://docs.google.com/spreadsheets/d/1y-RlDXs8nl2udZ-LR6XZ_zoFHGsYXP0nLnl7JlCNVsc/edit?usp=sharing) I created for this section.
+
+## How to do item analysis
+
+As mentioned above, if you used survey software that gives you item frequencies, percents, and bar or pie charts of these same values . . . and if these univariate item data alone seem to answer your research questions . . . then your next tasks are:
+
+- How to copy the output to your document
+- Begin writing to make sense of the results in light of your research questions
+
+You can also do most if not all of what I've described here in Pivot Table.
+
+## The Bottom Line
+
+**Most importantly**: _What do you learn from the item results_ in relation to the big guiding questions of your investigation?
+
+Do the item results surprise you? If so, why?
+
+Do the item results confirm what you expected?
+
+------------------------------------------------------------------------

@@ -1,0 +1,20 @@
+---
+title: "About Me"
+bibliography: [bibfile.bib,packages.bib]
+link-citations: yes
+output:
+  html_document:
+    theme: cerulean
+---
+
+[![Jack Huber](images/Me3.jpg){width="75"}](https://jackhuber.org)
+
+I've gone by different titles -- sociologist, data analyst, psychometrician, assessment director -- but the common theme of my career has been an enduring commitment to use data in the service of the common good.
+
+In college and the first part of my graduate studies I studied sociology. That's where I learned statistics and how to analyze data from large data sets (national surveys). Back then I was interested in the modeling the effects of religious attitudes and beliefs on political attitudes and behavior in American Christianity. I have an enduring fascination with religion and continue to study it [on the side](https://jackhuber.org).
+
+In 2000, I left sociology and went to work for a K-12 school district as its first data analyst, my task being to make actionable sense of standardized test scores for principals and teachers. There I learned how to present data attractively for people who are easily confused by it. Along the way I earned my doctorate in educational psychology where I discovered the strange but fascinating world of psychometrics and dove deep into the study of measurement.
+
+From there the primary career paths were academia or a testing company, but instead I went into public administration. In 2006 I got a job as a Director of Assessment for a large school district, then went on for several years to do the same job for several other districts. As that was a leadership role I spent a lot of time in leadership meetings and doing managerial work and less time working creatively with data.
+
+I joined the Swedish Pharmacy team in late 2020 and have enjoyed every minute here since then. It's my pleasure to help you make more informed decisions with data.

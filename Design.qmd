@@ -1,0 +1,87 @@
+# Planning the Project {.unnumbered}
+
+## The causal logic of the project
+
+The resident researcher should begin the project with a basic sense of the design logic of the project. The point of this section is to introduce or reinforce a few basic concepts of research design as they apply to the resident research project.
+
+The project aspires to make a case for a proposed improved medical treatment. This case rests on causal evidence that the proposed treatment is more clinically effective than the current mode of treatment. The most convincing case would demonstrate that the treatment alone caused the improvement and cast doubt that the improvement would have happened anyway. To thoughtfully plan data collection for the strongest causal evidence, and to anticipate and minimize challenges of rival explanations, is the purpose of research **design** [@CampbellStanley1963].
+
+The ideal design would be based on random assignment of patients to conditions, as in a randomly controlled trial. The resident researcher would randomly assign patients to a control condition and various treatment conditions, then compare outcomes of all these groups following treatment, and the outcomes will differ at least slightly. Assume patients in the treatment conditions had better outcomes than patients in the control condition. The resident could attribute this difference to the treatment alone because in all other ways the groups would differ only by chance *by design*.
+
+Random assignment is probably not an option for resident research project. Until that happens, the project falls under the category of **quasi-experiment** which means it is more vulnerable to **confounding explanations** of any differences in outcomes.
+
+The resident research project based on retrospective chart review will culminate in a comparison between two groups: a pre-implementation group and a post-implementation group. Assume a set of data that show better outcomes for the post-implementation group. Great! Can we attribute that to implementation of an improved treatment or protocol, or for some other reason would the post-implementation group have fared better anyway?
+
+One potentially confounding pre-existing difference between the two groups is *time*, or history. A recent resident project provides a good example. In this project, the time frame for the pre-implementation group was early 2020 and thus this group had a higher incidence of COVID-19 infection than the more recent post-implementation group. Were outcomes for the pre-implementation group less favorable because more of them were infected with COVID-19? The proposed dosing protocol may very well have improved outcomes for the post-implementation group. The problem is there are competing explanations of the results. Pre-existing differences between the two groups in COVID-19 infection amounted to a *confounding* variable due to history.
+
+The point here is not to teach a course in research design but to help the resident researcher clarify for this project:
+
+-   What are the primary outcomes to improve? Length of stay? Time-to-therapeutic level? These are *dependent* variables. They depend on, or are the effects of, other variables.
+-   What is the difference in treatment intended to cause the improvement in the post-implementation group? This is the independent variable.
+-   All other variables are control variables. They should differ only by chance. If there is a noticeable pre-existing difference, and the level of that factor in one group affects the outcome, it is a confound.
+
+## How many patients?
+
+Possibly the most pressing question for resident research projects is: **How many patients do I need?**
+
+The resident research project will culiminate in a series of comparisons between the pre-implementation and post-implementation groups. Outcomes of the two samples will differ by at least some quantity. The resident researcher expresses this difference as an effect, like this:
+
+\[insert table about here\]
+
+Assume that this effect suggests more favorable outcomes for the post-implementation group. This effect raises several questions:
+
+-   How do we evaluate this effect?
+-   Could we attribute it to chance? (because it would be very unlikely for both groups to have exactly the same outcomes)
+-   Or is it larger than that?
+
+In statistical terms, this is a question of **statistical power**. Power is the ability to isolate a treatment effect when it really does exist [@Cohen1988]. Power is a function of effect size, sample size, and statistical significance. In order to decide on a number of patients we need to have a sense of what size of effect we want to reliably detect.
+
+```{r power, echo=FALSE, fig.cap=''}
+# Plot sample size curves for detecting correlations of
+# various sizes.
+
+library(pwr)
+
+# range of correlations
+r <- seq(.1,.5,.01)
+nr <- length(r)
+
+# power values
+p <- seq(.4,.9,.1)
+np <- length(p)
+
+# obtain sample sizes
+samsize <- array(numeric(nr*np), dim=c(nr,np))
+for (i in 1:np){
+  for (j in 1:nr){
+    result <- pwr.r.test(n = NULL, r = r[j],
+                         sig.level = .05, power = p[i],
+                         alternative = "two.sided")
+    samsize[j,i] <- ceiling(result$n)
+  }
+}
+
+# set up graph
+xrange <- range(r)
+yrange <- round(range(samsize))
+colors <- rainbow(length(p))
+plot(xrange, yrange, type="n",
+     xlab="Correlation Coefficient (r)",
+     ylab="Sample Size (n)" )
+
+# add power curves
+for (i in 1:np){
+  lines(r, samsize[,i], type="l", lwd=2, col=colors[i])
+}
+
+# add annotation (grid lines, title, legend)
+abline(v=0, h=seq(0,yrange[2],50), lty=2, col="grey89")
+abline(h=0, v=seq(xrange[1],xrange[2],.02), lty=2,
+       col="grey89")
+title("Sample Size Estimation for Correlation Studies\n
+  Sig=0.05 (Two-tailed)")
+legend("topright", title="Power", as.character(p),
+       fill=colors)
+```
+
+This a plot of power rates against these other variables. A large effect (r \~ 0.5) is detectable with a sample of any size. But only large samples have the power to detect a statistically significant (p \< .05) small correlation (r = 0.1).

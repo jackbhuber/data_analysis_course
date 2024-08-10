@@ -1,0 +1,11 @@
+# External resources for data analysis {.unnumbered}
+
+------------------------------------------------------------------------
+
+Here are a few links to external resources on data analysis and statistics.
+
+-   [The R Psychologist, by \@magnussonCohend](https://rpsychologist.com/) - is an outstanding resource to better understand statistics
+-   [Online Modules in Research Methods and Data Analysis](https://lo.unisa.edu.au/course/view.php?id=8481) at the University of South Australia
+-   [Data Analysis](https://libraryguides.unh.edu/excel/analysis) from the University of New Hampshire
+
+------------------------------------------------------------------------

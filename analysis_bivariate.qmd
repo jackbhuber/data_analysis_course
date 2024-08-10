@@ -1,0 +1,26 @@
+# Statistics for bivariate analyses {.unnumbered}
+
+------------------------------------------------------------------------
+
+Here are two statistics for bivariate (two variable) analyses:
+
+### Chi-square $\chi 2$ tests of association
+
+The chi-square $\chi 2$ test is a commonly used statistic for nominal/categorical data. We use it to examine the distribution of cases across **categories**. Essentially, it compares the distribution of cases you actually see to the distribution of cases you would expect to see from normal variation.
+
+Here is one example of a chi-square $\chi 2$ test for a recent resident project. The question is whether gender (male/female) makes a statistically significant difference in whether patients need three or more dose changes of bivalirudin before they reach a therapeutic goal.
+
+```{r}
+#d <- read.csv("data/bivalirudin.csv") # load data
+#table_dosechgs_gender <- xtabs(~d$d_Male + d$DV_3DoseChanges, data=d) # crosstabulate 
+#knitr::kable(table_dosechgs_gender, align = "l")
+#summary(table_dosechgs_gender) # calculate chi-square
+```
+
+The chi-square $\chi 2$ value of 1.9421 with one degree of freedom has a p-value of 0.1634. It is not statistically significant, suggesting that gender makes no significant difference in reaching therapeutic goal.
+
+### t tests
+
+The t test is a commonly used statistic for comparing two groups on a continuous outcome.
+
+------------------------------------------------------------------------

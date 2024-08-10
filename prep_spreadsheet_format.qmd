@@ -1,0 +1,71 @@
+# Prepare your spreadsheet for analysis {.unnumbered}
+
+------------------------------------------------------------------------
+
+The foundation of quantitative data analysis is the spreadsheet.
+
+There are different software applications for working with spreadsheet data. One is Excel. Another is Google Sheets. Still another is Apple Numbers.
+
+Whatever tool you use, you need to ensure your data are clean before attempting any serious analysis.
+
+As you work with your data, you may have a good sense of how clean it is, especially if you collected the data yourself.
+
+[Here](https://docs.google.com/spreadsheets/d/1iqi0CMqZEsGZ2m96q0U4SZ27p5Hr_nkDb8XW1IhrdF0/edit?usp=sharing) is a good example of clean data from a survey.
+
+Here are some principles of data cleaning to guide you:
+
+**Each column should be one variable.** As an example, one column might be gender. Another might be race.
+
+**Each cell should contain only one piece of information**. For example, if the column is age in years, each cell should contain only one value.
+
+**Use a separate column for each piece of information**. Don't enter data such as "120/80" for blood pressure. Enter systolic blood pressure as one variable and diastolic blood pressure as another. Don't enter data as "A,C,D" or "BDF" if there are three possible answers to a question. Include a separate column for each answer.
+
+**Each row should be one observation.** In most cases each row represents a [person]{.underline}, such as a student, or a survey respondent, or a patient.
+
+**Put variable names in the first row**. Variables must start with a letter. Do not include special characters (#, !, ?, %, etc.) or spaces in your variable names. You can get away with underscores, such as, age_in_years.
+
+**Keep all your data "touching". *No empty rows or columns***. This is [critically important for sorting]{.underline}. Empty columns or rows break the structural integrity of your data set and could allow you to sort a subsection of your data apart the rest of it.
+
+**No merged cells**. This, too, makes sorting difficult.
+
+**Decide on a "missingness" convention**. Missing data can cause a multitude of problems. To enter a missing data value, either enter a blank or an "impossible" numeric code (for numbers) or an easily recognizable single digit character code for character (trying to avoid mixing numeric and character data). If you do use a missing value code (such as 9), be sure that it cannot be confused with a "real" data value.
+
+**Dedicate one worksheet to your original, unedited raw data.** You might label this worksheet "Original" or "Raw data." This is important so that [**when you make a mistake (and trust me you will), you always have your original data to fall back on**]{.underline}.
+
+**Make a copy of your raw data to do all your cleaning and analysis**. Label this one "Clean_data."
+
+**Do all your analyses on different worksheets from your original raw data and your clean raw data sheets.**
+
+**Try to keep comparison groups and intervention groups in the same spreadsheet**. For example, if you have "treated" and "non-treated" patients, or different groups of students, use a column variable such as Treated and assign each patient a code of "Yes" or "No." If you have a pre- and a post group, keep all the people together (with the same columns) and identify each person as "Pre" or "Post."
+
+**Make the most of your header row of variable labels**. On your worksheet of "Clean" (or "Working") data, make sure every column of data has a clear, concise, descriptive label. Here's what I do with my header row:
+
+-   Ensure that the top row of my data includes a clear, concise label for each column of data.
+-   Bold the row.
+-   Add a fill color to the row.
+-   Freeze the row (Select the row, then View --\> Freeze top row).
+-   Enable word wrap in the row.
+
+**Apply a consistent format for your columns**. Data elements are different sizes. Names tend to be long while numerical values tend to be short. I don't like it when a column label is left-aligned but the data are right-aligned; I find these variations in visual formatting distracting. To deal with these distractions, I usually:
+
+-   Apply all the column label formatting mentioned above.
+-   Fix all my column widths to 15.
+-   Left align columns (both column labels and data) for text (patient names, medication names, etc.).
+-   Center columns (both column labels and data) for numeric values.
+-   Right align columns for time data.
+
+**Learn how to use PivotTable**. Learn it, live it, love it. This is your Swiss army knife of data analysis. This is the tool you use to summarize your raw data into groups for comparison. Excel and Google Sheets both have it. Always put the PivotTable on a fresh worksheet away from your raw data.
+
+**Look for weird values**. For example, if one column contains values from a Likert scale ranging from 1 to 4 (or 5), sort on this column to look for out-of-range values. This is especially important if data were entered manually.
+
+I find (and I think you will too) that enforcing a consistent format turns down the noise of formatting so I can see and focus on the data.
+
+So, clean your data! Take it to the next level of clean!
+
+You will thank me.
+
+You're welcome.
+
+(mic drop)
+
+------------------------------------------------------------------------

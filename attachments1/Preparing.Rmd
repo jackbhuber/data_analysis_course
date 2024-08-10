@@ -1,0 +1,126 @@
+---
+title: "DATA PREPARATION"
+bibliography: [bibfile.bib,packages.bib]
+link-citations: yes
+output:
+  html_document:
+    theme: cerulean
+    toc: yes
+    # number_sections: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+    citation_package: natbib
+    fig_caption: yes
+---
+
+The purpose of this page is to help you clean, organize, and otherwise prepare and enhance your data for statistical analysis and/or visualization.
+
+---
+
+# Best practices for Excel
+
+In all likelihood the primary tool you'll use for working with your data is Excel - possibly by now the most commonly used tool for working with data in the world. What follows is a list of good practices that might make your Excel data easier to manage and collaborate with others. These tips will save you time wasted on fixing data and will help keep your data in format appropriate for analysis:
+
+1. **Put _variables in columns_ and _observations in rows_**. Include a unique identifying number for each case. Be sure that each variable name is unique (no duplicate variable names).
+
+2. **Put _variable names_ in the _first row_**. Variables must start with a letter. Do not include special characters (#, !, ?, %, etc.) or spaces in your variable names.
+
+3. **Keep all your data "touching". _No empty rows or columns_**. This is critically important for sorting. Empty columns or rows break the structural integrity of your data set and could allow you to sort a subsection of your data apart the rest of it.
+
+4. **No merged cells**.
+
+5. **Use a separate column for each piece of information**. Don’t enter data such as "120/80" for blood pressure. Enter systolic blood pressure as one variable and diastolic blood pressure as another variable. Don't enter data as "A,C,D" or "BDF" if there are three possible answers to a question. Include a separate column for each answer.
+
+6. **Decide on a "missingness" convention**. Missing data can cause a multitude of problems. To enter a missing data value either enter a blank or an "impossible" numeric code (for numbers) or an easily recognizable single digit character code for character (trying to avoid mixing numeric and character data). Be sure, if you use a missing value code, that it cannot be confused with a "real" data value.
+
+7. **Use only one worksheet for your data; do analysis on a different worksheet**. If you decide to use multiple sheets for you data, follow the variable naming conventions for the tabs that name the sheets (keep the names simple and unique).
+
+8. **Do not "stack" data on the same sheets**. For example, "treated" versus "non-treated" patients can be handled by column variable that has a code for Treated (yes/no).
+
+9. **Dedicate one worksheet to your original, unedited raw data. Make a copy of it to do all your cleaning and analysis**. You might label this worksheet "Original" or "Raw data." This is important so that **when you make a mistake, you always have your original data to fall back on**.
+
+10. **Dedicate one worksheet to your Clean / Working data**. 
+
+11. **Make the most of your variable labels**. On your worksheet of "Clean" (or "Working") data, make sure every column of data has a clear, concise, descriptive label. Here's what I do to take column labels to the next level:
+
+- Ensure that the top row of my data includes a clear, concise label for each column of data.
+- Bold the row.
+- Add a fill color to the row.
+- Freeze the row (Select the row, then View --> Freeze top row).
+- Enable word wrap in the row.
+
+12. **Apply a consistent format for your columns**. Data elements are different sizes. Names tend to be long while numerical values tend to be short. I don't like it when a column label is left-aligned but the data are right-aligned. I find these variations in visual formatting distracting. To deal with these distractions, I tend to:
+
+- Apply all the column label formatting mentioned above.
+- Fix all my column widths to 15.
+- Left align columns (both column labels and data) for text (patient names, medication names, etc.).
+- Center columns (both column labels and data) for numeric values.
+- Right align columns for time data.
+
+I find (and I think you will too) that enforcing a consistent format removes variable formatting as a distraction so I can see and focus on the data.
+
+---
+
+# Excel skills
+
+Here are the skills you will most likely need and use:
+
+- Sorting your data array on a column
+- Filtering your data array based on specific values of one or more columns
+- Fill down
+- Pivot Table
+- VLOOKUP function - to matching together related data from different sources
+- Conditional formatting
+- Basic calculations (SUM, AVG, COUNTIF, etc.)
+- CONCATENATE function - to stitch together text and values from different data columns into a new column (which is sometimes helpful and necessary but is generally bad data practice to be avoided)
+
+---
+
+# Examples of good data
+
+As you begin to work with your data and earnestly clean and prepare them for analysis, it's helpful to have some kind of model. Here are some examples of good data files with clean data:
+
+[bivalirudin.csv](data/bivalirudin.csv) - is a comma-separated data file which I prepared specifically for statistical data analysis in R [@R-base].
+
+---
+
+# Resources for data preparation
+
+[Tidy Data](https://vita.had.co.nz/papers/tidy-data.pdf), by Hadley Wickham (a well-known data scientist), is a classic paper that defines what makes data clean (or "tidy") [@WickhamTidy]
+
+The University of New Hampshire Library has an excellent [research guide for using Excel](https://libraryguides.unh.edu/excel), including [data cleaning](https://libraryguides.unh.edu/excel/cleaning), [data analysis](https://libraryguides.unh.edu/excel/analysis), [data visualization](https://libraryguides.unh.edu/excel/visualization), and [spreadsheet best practices](https://libraryguides.unh.edu/excel/bestpractices).
+
+[Preparing Data in Excel](https://libraryguides.unh.edu/excel/bestpractices), from the University of Nebraska Medical Center College of Public Health, has an excellent set of guidelines for working with Excel
+
+[Introduction to Excel](https://lo.unisa.edu.au/mod/book/view.php?id=646440&chapterid=164660) is an excellent online module from the University of South Australia Research Methodologies and Statistics department.
+
+[Analysis Ready Datasets](https://datamanagement.hms.harvard.edu/analyze/analysis-ready-datasets) is an excellent resource from Harvard Medical School
+
+---
+
+# Granularity of data
+
+Granularity of data means two related things worth your attention:
+
+1. One is the _size of the data point_, which is to say what context it provides for other, smaller, data points. Put another way, what data points do you intend to count or summarize, and by which groups do you intend to compare these summaries?
+
+2. The other is, essentially this question: What does a _row_ in the spreadsheet mean? Because Excel counts rows, but what's contained in a row may not be what you intend to count.
+
+Here are several different levels of granularity of Epic data:
+
+**Patient level**. A patient has a unique ID number: the MRN. No two patients have the same MRN. When it comes to mining Epic data for the research project, the patient list is perhaps the most important: the resident needs a “patient list”. When it comes to data mining, the patient “level” is context to more granular data in the sense that a patient can have multiple encounters - and thus multiple Encounter CSNs “within” the same Patient MRN.
+
+**Encounter level**. The unique Epic ID number for the encounter is the CSN. The encounter is context to more granular data such as a treatment regimen of a particular medicine. Multiple drug administrations can occur “within” an encounter CSN.
+
+**Medication administration level**. This is possibly the lowest level and the most granular data. In Caboodle, each administration of a medicine has a unique ID number and is time-stamped. My queries to date have been for counts of medicine administrations, or firsts, lasts, minimums and maximum doses within a hospital encounter or ICU stay.
+
+**Lab results level**. Lab data is similar to medicine administration data because, again in Caboodle, each lab result is has its own unique ID number and is time-stamped. There can be a great many lab results within a hospital encounter. My queries to date have been for counts of lab results, or firsts, lasts, minimums and maximum values within a hospital encounter or ICU stay.
+
+The resident data collection form is designed for patient level data; each row in the spreadsheet captures the experience of a hospital encounter. It can also be helpful to report the medicine administration and lab result data sorted chronologically by patient and encounter.
+
+---
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
+<div id="refs"></div>

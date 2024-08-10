@@ -1,0 +1,18 @@
+# Review these spreadsheet skills {.unnumbered}
+
+------------------------------------------------------------------------
+
+Excel, Google Sheets, or Numbers are powerful tools. But you don't know have to know everything about them to use them effectively to analyze the data you've collected.
+
+Here is a series of skills you will most likely need and use to analyze your data:
+
+-   How to sort your data by the values of a column
+-   How to filter your data based on specific values of one or more columns
+-   How to "fill down" a column
+-   How to analyze your data in [PivotTable](https://docs.google.com/spreadsheets/d/12iMxtPZuaP2QE3Gfe1tCXsjevRAgs6ocz5ZJQnWbOtM/edit?usp=sharing) ([here](https://docs.google.com/spreadsheets/d/1iqi0CMqZEsGZ2m96q0U4SZ27p5Hr_nkDb8XW1IhrdF0/edit?usp=sharing) is another good example)
+-   How to match data from different sources together using the VLOOKUP formula ([here](https://docs.google.com/spreadsheets/d/1-Vww8NFCu-hrL8Pt9cBZg9hweo8xzwU8/edit?usp=sharing&ouid=111506891119217821641&rtpof=true&sd=true) is a tool for you)
+-   How to add color to cells based on their values using [conditional formatting](https://docs.google.com/spreadsheets/d/1xwrQr5CDy7VNaouBCWgwe70Ne1jsrI2P7ycP2WfpjaQ/edit?usp=sharing)
+-   How to perform basic calculations like [SUM](https://docs.google.com/spreadsheets/d/1-_CjcSD-W0397iQTYuftYqAcVDtWueGTH0IK5i9N0P0/edit?usp=sharing), [AVG](https://docs.google.com/spreadsheets/d/1NlRw3_jci_taaqBJDnc4s7RBvuw0cwSb3QByOeg742w/edit?usp=sharing), [COUNTIF](https://docs.google.com/spreadsheets/d/1xwrQr5CDy7VNaouBCWgwe70Ne1jsrI2P7ycP2WfpjaQ/edit?usp=sharing), etc.
+-   How to stitch together text and values from different data columns into a new column using [CONCATENATE](https://docs.google.com/spreadsheets/d/1Qfu6FO35xVTDVMzytOB8Y5HmkQrdKEYRbOWe4R17z2M/edit?usp=sharing)
+
+------------------------------------------------------------------------

@@ -1,0 +1,341 @@
+---
+title: "RESEARCH DESIGN"
+bibliography: [bibfile.bib,packages.bib]
+link-citations: yes
+output:
+  html_document:
+    theme: cerulean
+    toc: yes
+    # number_sections: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: yes
+    citation_package: natbib
+    fig_number: yes
+    fig_caption: yes
+---
+
+The purpose of this page is to help you think through three important things in the beginning phase of your research project:
+
+-   Clarify research design
+-   Define variables
+-   Calculate sample size
+
+As time permits, please review these topics. I firmly believe any investment of time spent getting clear on these matters will pay dividends later on. If anything is unclear, please don't hesitate to [reach out to me](mailto:%5Bjack.huber@swedish.org%5D(jack.huber@swedish.org)).
+
+------------------------------------------------------------------------
+
+# Clarify your research design
+
+**Design** is about the reasoning of your research project, and more specifically the *causal* reasoning. Formal guidance for your research design is provided in these passages from the PGY1 Resident Longitudinal Project Learning Description:
+
+"The classic design for the research project is **baseline, intervention, and post-intervention**, however other designs may be considered.
+
+Completion of the resident project may involve the following:
+
+-   **formulating a study hypothesis**
+-   **creating a study design**
+-   conducting a literature search
+-   obtaining Institutional Research Board (IRB) approval or waiver
+-   **collecting baseline data**
+-   implementing the intervention
+-   **post-intervention data collection and analysis**
+-   presenting the results verbally and in writing"
+
+## Your project as a causal argument
+
+Your project aspires to make a case for a proposed medical treatment. The case rests on evidence that the proposed treatment is a clinical improvement over the status quo. The most convincing case would show that your treatment alone caused the improvement and that the improvement would not have happened anyway.
+
+Your improvement is predicated on the cleanest possible comparison of outcomes between patient treatment groups. The cleanest comparisons would come from random assignment. You would randomly assign patients to a control condition and various treatment conditions, then compare outcomes of all these groups following treatment. The group outcomes would differ at least slightly.
+
+Assume patients in the treatment conditions had better outcomes. You would attribute this difference to the treatment alone, because in all other ways the groups would differ only by chance ***by design***.
+
+## Your project as a quasi-experiment
+
+Remember your recent [advice from Dr. Eric Harvey](https://providence4.sharepoint.com/:p:/r/sites/PCCSystemPT/Shared%20Documents/Resident%20Boot%20Camp/Study%20Design/Study%20Design%207.21.2022.pptx?d=we309ac530cb044e1b583b62783c4b97c&csf=1&web=1&e=LXlmtI) about how a pure experiment with random assignment will probably not be a feasible design for your project. As a result, your project will mostly like use a **quasi-experimental** design. This means that when your project ultimately produces differences in outcomes between a baseline and post-intervention groups, the differences will be attributable to rival explanations from confounding variables [@CampbellStanley1963; @Krass2016].
+
+If your project uses the classic **baseline - intervention - post-intervention** design specified in the Project Learning Description, the research design looks something like this:
+
+|                    |     |     |      |
+|:------------------:|-----|:---:|:----:|
+| Intervention Group |     |  X  |  O1  |
+|  Comparison Group  |     |     | O~2~ |
+
+where you are comparing a group of patients that has experienced an intervention X to a similar group that has not. The same data are collected of all patients (O~1~ representing observations of the post-intervention group and the same data in O~2~ of the comparison group) but the patients are not randomly assigned to the groups.
+
+When you have all your data collected and set up for analysis, you'll be comparing your two groups on the same observations, like this:
+
+|                  |                    |             |
+|:----------------:|:------------------:|:-----------:|
+| Comparison Group | Intervention Group | Difference  |
+|       O~1~       |        O~2~        | O~2~ - O~1~ |
+
+Assume your project finds better outcomes for the intervention group. Great! Can you attribute that to your intervention? Or for some other reason would your intervention group have fared better anyway?
+
+Those "some other reasons" have to do with pre-existing differences between your groups besides your intervention. These called **confounds** (or **rival explanations**) for your results and they are threats to the internal validity of your project because they threaten the causal argument of your study.
+
+Demographic differences or differences in other baseline characteristics between the comparison and intervention groups could affect the outcomes of the two groups. Another potential confound is ***time*** (or ***history***). History could make a clinical difference in the time from pre-intervention treatment to post-intervention treatment.
+
+Here's an example from a recent resident project:
+
+In this project, the time frame for the pre-intervention group was early 2020 and thus this group had a higher incidence of COVID-19 infection than the more recent post-intervention group. Were outcomes for the pre-intervention group less favorable because more of them were infected with COVID-19? The proposed dosing protocol may very well have improved outcomes for the post-intervention group. The problem is there are competing explanations of the results. Pre-existing differences between the two groups in COVID-19 infection amounted to a confounding variable due to history.
+
+The point here is to help you clarify three things:
+
+1.  What are the **primary outcomes** you're trying to improve for patients? Length of stay? Time-to-therapeutic level? Think of these as your [dependent]{.underline} (or [outcome]{.underline}) variables, because they *depend on*, or are the effects of, other variables.
+2.  What is the **difference in treatment intended to *cause*** the improvement in the intervention group? Think of this as your primary [independent]{.underline} or [predictor]{.underline} variable.
+3.  All other variables -- background variables -- are **control** variables because you are trying to *control for* their potentially confounding effect on the results. Groups should differ on these variables only by chance. If there is a noticeable pre-existing difference, and the level of that factor in one group affects the outcome, it is a confound.
+
+**Advice**: When you have all your data in hand, carefully compare your comparison and intervention groups on these background variables. They should be as similar as possible in both groups. Ideally the differences should not be statistically significant.
+
+------------------------------------------------------------------------
+
+# Define your variables
+
+Your outcome variables are critical. These are the aspects of patient care that you want to improve with your project. Here are some examples from recent projects:
+
+-   Proportion (or percent) of patients who achieve an initial therapeutic goal
+-   Time to initial therapeutic levels
+-   Proportion (or percent) of patients who experience acute kidney injury
+-   Incidence of acute pancreatitis
+-   Incidence of propofol infusion syndrome (PRIS)
+-   ICU mortality
+-   Survival until discharge
+-   Hospital length of stay
+-   ICU length of stay
+-   Time on mechanical ventilator
+
+This is important because you want to think of these as variables (patients will have different values) and more specifically the **measurement level** of these variables. Here's what I mean:
+
+Are these outcomes primarily ***categories*** (like mortality, incidence of PRIS) with no order over each other? Then your final statistic for expressing your treatment effect will likely be a chi-square  $\chi 2$ test.
+
+Are these outcomes primarily ***continuous scale values*** (like temperature or time) that live on a scale? Then your final statistics for expressing your treatment effects will likely be analyses of variance (ANOVA), t-tests, and the like.
+
+------------------------------------------------------------------------
+
+# Estimate your sample size
+
+At some point you will come to a very important question for your project: **How many patients do I need for my patient list?**
+
+It's partly a statistical question. You probably already know that the larger, the better, for stronger, more credible, statistics.
+
+It's also a practical question. Each patient will cost you at least some **time** spent reviewing their chart to collect and/or verify data. Depending on the size and complexity of your study, you may not have the time to verify too large of a patient list [@Johnston2019].
+
+So how many patients will strike a good balance between sample size and feasibility?
+
+In order to decide on a number of patients, you need three pieces of information:
+
+1.  **Effect size**
+2.  **Statistical significance**
+3.  **Power**
+
+Let's talk about each of them:
+
+## Effect size
+
+Your project will ultimately produce data for comparisons (such as between your baseline and post-intervention groups) from which to calculate simple statistics, and from these statistics to draw conclusions about the effectiveness of your treatment in the population. Outcomes of these two groups will differ by at least some quantity, and you'll express this difference as an observed *effect*, possibly like this one from a recent project:
+
+**Table 1.**
+
+*Patients achieving Initial Therapeutic Goal*
+
+| Outcome | Measure | Comparison Group | Intervention Group | Difference |
+|:-------:|:-------:|:----------------:|:------------------:|:----------:|
+|   No    |    N    |       136        |         2          |            |
+|   Yes   |         |        35        |         4          |            |
+|  Total  |         |       171        |         6          |            |
+|   No    |   \%    |       79.5       |        33.3        |            |
+|   Yes   |         |       35.0       |        66.7        |    31.7    |
+|  Total  |         |      100.0       |       100.0        |            |
+
+Let's further assume, as in Table 1 above, that this observed effect suggests more favorable outcomes for the intervention group.
+
+In the example, two-thirds of the patients in the intervention group achieved the initial therapeutic goal, compared to just over one-third of patients in the comparison group. This is a difference, or effect, of 31 percent points. Great! How do we evaluate this? Is that small? Large?
+
+Consider another outcome variable of this study:
+
+**Table 2.**
+
+*Time to Initial Therapeutic Goal (Days)*
+
+| Measure | Comparison Group | Intervention Group | Difference |
+|:-------:|:----------------:|:------------------:|:----------:|
+| Median  |        3         |         2          |     -1     |
+
+The previous outcome was a category: the patient achieved initial therapeutic level (Yes) or they didn't (No). This outcome is continuous: the time patients take (more or less) to reach initial therapeutic goal. This outcome is expressed as a median and the two medians are compared. The difference of -1 suggests that patients in the intervention group tended to reach their initial therapeutic goal faster than their predecessors in the comparison group. How do we evaluate the significance of this effect?
+
+In either case, we talk of effect size as a measure of the magnitude of difference between two groups, and in the research and statistical communities, we tend to express effect size in a standard way as a mean difference between two groups in standard deviation units.
+
+The classic text on power analysis is @Cohen1988. @Cohen1988 came up with the following scheme for judging the size of effects:
+
+| Effect size | Cohen's *d* |
+|:------------|:-----------:|
+| Small       |     0.2     |
+| Medium      |     0.5     |
+| Large       |     0.8     |
+
+To understand these effects of different size, you need to imagine two overlapping distributions of data (i.e., baseline and intervention, male and female, etc.). A larger effect describes a larger distance between the distributions. To see what this looks like, check out ["Interpreting Cohen's *d* Effect Size"](https://rpsychologist.com/cohend/) by @magnussonCohend (and buy him a coffee).
+
+**Advice**: As you do your literature review, pay careful attention to effect sizes to get a sense of what effect sizes to expect, so that you can build enough power into your study to detect such an effect if it actually exists.
+
+## Statistical significance
+
+Again let's assume your project yields a favorable outcome for your intervention group. You have two choices, each of which could be a mistake:
+
+1.  **Conclude that your observed effect *is* a true effect of your treatment in the population** -- that is, that your observed effect is more likely signal than noise. In statistical terms, this means *rejecting the null hypothesis* that there is no difference between groups in the population. But in so doing you may be committing a **Type I error** of rejecting the null hypothesis when it's in fact *true*. Generally speaking, this is regarded as a more serious error and thus we conventionally set a very low tolerance for it of **.05** which means "we want to make this particular mistake no more than 5% of the time."
+
+2.  **Conclude that your observed effect *is not* a true effect of your treatment in the population and is more likely noise** (because it would be very unlikely for both groups to have exactly the same outcomes). In statistical terms, this means *failing to reject (or accepting) the null hypothesis* that there is no difference between groups in the population. But in so doing you may be committing a **Type II error** of failing to reject (or accepting) the null hypothesis when it's actually false.
+
+In the example above, a much higher proportion of patients in the post- group who received AUC-based vancomycin dosing reached their initial therapeutic goal than their predecessors in the pre-implementation group who received trough-based dosing.
+
+What do we make of this effect?
+
+Hypothesis tests of statistical significance offer some help.
+
+These days it's easy enough to run a statistical test of your observed effect. Statistics software (JMP and SAS) is available for free for faculty and students of the University of Washington (UW). If you haven't already, I encourage you to, as time permits, take advantage of this chance to gain some experience working with data and statistical software. (You never know, it may change your life.)
+
+Because we are comparing two proportions, we can run a Z test of proportions to compare the proportions we *actually* see with the proportions we would *expect* to see if trough- or AUC-based vancomycin dosing made no difference in the proportion of patients reaching their initial therapeutic goal.
+
+P-value is the probability of finding a statistic of a given size in a hypothetical distribution of a very large number of statistics under the null hypothesis of no difference between groups in a population. The conventional p-value that most researchers use is **.05**. This means low probability: very rare or unlikely. So if your statistic has a p-value of less than .05, you're saying it's "statistically significant" in the sense that "a statistic of this size would be very rare under the null hypothesis."
+
+Hypothesis tests of statistical significance using p-values help you quantify and minimize your risk of making a Type I error.
+
+But even with a statistically significant finding (p < .05) you're not out of the woods. It's still a test. You still have the same two choices, and whichever you decide still carries a risk of a Type I or Type II error [@LeppinkEtAl2016].
+
+## Power
+
+**Statistical power** is the ability to find a treatment effect when it really does exist [@Cohen1988]. So you want it to be high. A conventional power level that many researchers use is **.8**, or **80%**.
+
+Power is a function of effect size, sample size, and statistical significance. Figure 1 below is a chart to illustrate how these things are related. For the purpose of using this chart to help you design your research project, statistical significance is held constant: all the information presented assumes statistical significance with two-tailed test of p < 0.05. With a sample of 200 patients, you have plenty of power to find moderate to large effects (r > 0.25), but less power to find smaller effects (r < 0.25). By contrast, a large sample of, say, 1000 patients, would give you the power to find statistically significant small effects.
+
+```{r power, echo=FALSE, fig.cap='Figure 1. Power Analysis'}
+# Plot sample size curves for detecting correlations of
+# various sizes.
+
+library(pwr)
+
+# range of correlations
+r <- seq(.1,.5,.01)
+nr <- length(r)
+
+# power values
+p <- seq(.4,.9,.1)
+np <- length(p)
+
+# obtain sample sizes
+samsize <- array(numeric(nr*np), dim=c(nr,np))
+for (i in 1:np){
+  for (j in 1:nr){
+    result <- pwr.r.test(n = NULL, r = r[j],
+                         sig.level = .05, power = p[i],
+                         alternative = "two.sided")
+    samsize[j,i] <- ceiling(result$n)
+  }
+}
+
+# set up graph
+xrange <- range(r)
+yrange <- round(range(samsize))
+colors <- rainbow(length(p))
+plot(xrange, yrange, type="n",
+     xlab="Correlation Coefficient (r)",
+     ylab="Sample Size (n)" )
+
+# add power curves
+for (i in 1:np){
+  lines(r, samsize[,i], type="l", lwd=2, col=colors[i])
+}
+
+# add annotation (grid lines, title, legend)
+abline(v=0, h=seq(0,yrange[2],50), lty=2, col="grey89")
+abline(h=0, v=seq(xrange[1],xrange[2],.02), lty=2,
+       col="grey89")
+title("Sample Size Estimation for Correlation Studies\n
+  Sig=0.05 (Two-tailed)")
+legend("topright", title="Power", as.character(p),
+       fill=colors)
+```
+
+In order to decide on a number of patients, you therefore need three pieces of information:
+
+1.  **Statistical significance**. In most cases this will be **p\<.05**.
+2.  **Power**. In most cases this will be **.8**.
+3.  **Effect size**. This will depend on your literature review. What previous researchers have found will give you some sense of what to expect in the way of group differences.
+
+### Tools for power analysis
+
+Once you have these data values in hand, there are various tools for doing power analysis.
+
+One is [ClinCalc](https://clincalc.com/Stats/SampleSize.aspx). Use this tool to estimate the power you'll get to detect treatment effects with different sample sizes.
+
+Another, more sophisticated, tool is [G\*Power](https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower.html). This tool is free for download and should install smoothly on your computer.
+
+### Sample power analyses
+
+I use the `pwr` [@R-pwr] package in `R` [@R-base]. Here are some sample power analyses for you:
+
+#### For a categorical outcome
+
+If your outcome is categorical, then you want to calculate power and sample size based on a statistic that is appropriate for categorical outcomes.
+
+**Chi-square $\chi 2$ test of association**. If your outcome is two categories and you want to compare two groups (baseline and intervention, male and female, etc.) then you might choose a chi-square $\chi 2$ test of association.
+
+```{r}
+library(pwr)
+cohen.ES(test = "chi", size = "small")
+pwr.chisq.test(w = 0.1, power = 0.8, df = 1, sig.level = 0.05)
+```
+
+To detect a statistically significant (p \< .05) *small* effect of 0.1 with one degree of freedom (a 2x2 table) and 80% power, you will need **784 patients**. That's a lot of charts to review! Let's see how many patients we need to find a *medium* effect.
+
+```{r}
+library(pwr)
+cohen.ES(test = "chi", size = "medium")
+pwr.chisq.test(w = 0.3, power = 0.8, df = 1, sig.level = 0.05)
+```
+
+Eighty-seven patients. That's more like it!
+
+**Difference of proportions**. Another way to analyze a categorical outcome is to **compare proportions**. The following calculations estimate the sample sizes in each group necessary to detect a statistically significant small effect at 80% power.
+
+```{r}
+library(pwr)
+cohen.ES(test = "p", size = "small")
+pwr.2p.test(h = 0.2, power = 0.8, sig.level = 0.05, alternative = "greater")
+```
+
+Three hundred nine patients! That's a lot of patients. How about a medium effect?
+
+```{r}
+library(pwr)
+cohen.ES(test = "p", size = "medium")
+pwr.2p.test(h = 0.5, power = 0.8, sig.level = 0.05, alternative = "greater")
+```
+
+Forty-nine patients in each group. That's a more reasonable sample size to collect and manage.
+
+#### For a continuous outcome
+
+If your outcome variable is continuous, then you want to calculate power and sample size based on a statistic that is appropriate for continuous outcomes. If your outcome variable is like a temperature scale with equal intervals, and you want to compare outcomes of two groups, then you might use a **t test of (different) means**:
+
+```{r}
+library(pwr)
+cohen.ES(test = "t", size = "small")
+pwr.t.test(d = 0.2, power = 0.8, sig.level = 0.05, alternative = "greater")
+```
+
+Again, a project designed to detect a statistically significant (p\<.05) small effect (d=0.2) with 80% power would require **310** patients in each group. That's 620 patient charts to collect and verify. How about a medium effect?
+
+```{r}
+library(pwr)
+cohen.ES(test = "t", size = "medium")
+pwr.t.test(d = 0.5, power = 0.8, sig.level = 0.05, alternative = "greater")
+```
+
+To detect a statistically significant (p \<. 05) medium effect (d = 0.5) at 80% power would require 50 patients in each group. A total sample of 100 patients is much more manageable.
+
+---
+`r if (knitr::is_html_output()) '
+# References {-}
+'`
+<div id="refs"></div>

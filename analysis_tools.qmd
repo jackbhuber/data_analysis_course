@@ -1,0 +1,23 @@
+# Software for data analysis {.unnumbered}
+
+------------------------------------------------------------------------
+
+Of equal importance to the didactics of statistics are the brass tacks of software for working with statistics. Here are several software tools for analyzing data:
+
+## Excel-based tools
+
+-   [EZAnalyze](http://www.ezanalyze.com/) is a simple Excel add-in for data analysis. It includes menus for selecting various statistics from your variables.
+-   [XLStat](https://www.xlstat.com/en/)
+-   Data Analysis native add-in
+
+## Google Sheets tools
+
+## Data analysis software
+
+-   [R \@R-base](https://www.r-project.org/), with [RStudio](https://www.rstudio.com/) and [R Markdown](https://rmarkdown.rstudio.com/), is **free** open source software for data analysis, statistics, and data visualization. It is powerful and flexible but it does require ongoing learning of code which is constantly evolving. I use R for my own statistical work, and I've built this website in [Quarto](http://quarto.org), a platform for building documents, books, presentations, websites, and dashboards in R, Python and more.
+
+Here are several other robust software applications for data analysis available to you. One or more of them may be free for you as a Gonzaga student:
+
+-   [JMP](https://itconnect.uw.edu/uware/jmp/) - JMP is a suite of software used for statistical analysis
+-   [SAS](https://itconnect.uw.edu/uware/sas/) - The SAS System is a comprehensive statistical software package from SAS Institute for data management, graphics, analysis, and presentation
+-   [SPSS](https://itconnect.uw.edu/uware/spss/) - IBM SPSS (Statistical Package for the Social Sciences) provides data and statistical analysis, file management capabilities, graphics and reporting features

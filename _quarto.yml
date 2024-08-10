@@ -1,23 +1,48 @@
 project:
   type: book
 
+# sidebar: false
 book:
-  title: "EDLD710"
-  author: "Jane Doe"
-  date: "8/30/2022"
+  title: "Data Analysis for Problems of Practice"
+  author: "Jack B. Huber, Ph.D."
+  date: last-modified
+  page-navigation: false
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - part: prep.qmd
+      chapters:
+        - prep_spreadsheet_format.qmd
+        - prep_spreadsheet_skills.qmd
+        - prep_more_resources.qmd
+    - part: analysis.qmd
+      chapters:
+        - analysis_measurement_levels.qmd
+        - analysis_univariate.qmd
+        - analysis_pivot.qmd
+        - analysis_bivariate.qmd
+        - analysis_more_resources.qmd
+        - analysis_tools.qmd
+    - part: surveys.qmd
+      chapters: 
+        - item_analysis.qmd
+        - scale_development.qmd
+    - part: Reporting.qmd
+      chapters:
+        - graphs.qmd
+        - tables.qmd
     - references.qmd
+  navbar: 
+    background: navy
+    foreground: white
+  site-url: https://data_analysis.jackhuber.org
 
 bibliography: references.bib
 
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
+  #pdf:
+  #  documentclass: scrreprt
 
 editor: visual
 

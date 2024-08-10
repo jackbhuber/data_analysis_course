@@ -1,0 +1,23 @@
+# Explore your variables with univariate analyses {.unnumbered}
+
+------------------------------------------------------------------------
+
+Once you have data in hand, the first thing you should do is explore your data. By this mean do **univariate analyses** of each variable in its own right.
+
+If you have **categorical** data (people in categories):
+
+-   Run frequencies to see where people are in your categories. Which are the largest categories? Which are the smallest categories? One way you might do this is by using PivotTable in Excel.
+
+If you have **ordinal** data (people in categories where some categories are "more than" others):
+
+-   Do frequencies to see how people are distributed. What is the **median** of these variables? Remember that central tendency is one number that summarizes the group of numbers. What does this value mean in real world terms?
+
+If you have **interval** or **ratio** data (people have a place on a temperature-like scale):
+
+-   Run **measures of central tendency** like ***average***. What is the one number that summarizes the group of numbers? What does this mean in practical real-world terms?
+
+-   But don't sleep **dispersion**! Everyone understands average, but equally important is **spread** variation away from the average. Find the **standard deviation** of your variables and think of this as "deviation of the average person away from the average." Then how large is this spread? Are people all over the place? Or are they tightly clustered around the average (and thus pretty much on the same page). What does this mean in practical real world terms?
+
+-   Then there is **skew**. Where do people stack up? Is your distribution lopsided? This is a problem if you want to run parametric statistics (like correlation) because they assume normal distributions. But what might a lopsided distribution mean for your project in real, practical terms?
+
+------------------------------------------------------------------------
