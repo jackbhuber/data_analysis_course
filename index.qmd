@@ -6,4 +6,4 @@ The chapter structure to the left illustrates the organization of the site. Each
 
 These pages are works in progress. I aim for them to evolve to meet your needs. I will continue to edit them as I see fit; and if something is missing, please don't hesitate to reach out to me: [jack.bernard.huber\@gmail.com](mailto:jack.bernard.huber@gmail.com).
 
-[^index-1]: This site was built in `R` [@R-base] with `Quarto` [@R-quarto].
+[^index-1]: I built this site in `R` [@R-base] with `Quarto` [@R-quarto].

@@ -14,7 +14,7 @@
     "href": "index.html#footnotes",
     "title": "Data Analysis for Problems of Practice",
     "section": "",
-    "text": "This site was built in R (R Core Team 2022) with Quarto (Allaire 2022).↩︎",
+    "text": "I built this site in R (R Core Team 2022) with Quarto (Allaire 2022).↩︎",
     "crumbs": [
       "Introduction"
     ]
