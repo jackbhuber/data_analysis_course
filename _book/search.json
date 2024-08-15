@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "Data Analysis for Problems of Practice",
     "section": "",
-    "text": "Purpose of this Site\nThe purpose of this site1 is to offer targeted advice and resources to help you analyze the quantitative data you have collected for your capstone project. It is an adaptation of a similar project to support pharmacy resident students with medical research project but much of the advice and information applies equally well to educational research.\nThe chapter structure to the left illustrates the organization of the site. Each page aims to identify and address important topics in the process of analyzing quantitative data. This includes explanation, advice, and links to resources where available and appropriate.\nThese pages are works in progress. I aim for them to evolve to meet your needs. I will continue to edit them as I see fit; and if something is missing, please don’t hesitate to reach out to me: jack.bernard.huber@gmail.com.",
+    "text": "Introduction\nThe purpose of this site1 is to offer targeted advice and resources to help you analyze the quantitative data you have collected for your capstone project. It is an adaptation of a similar project to support pharmacy resident students with medical research project but much of the advice and information applies equally well to educational research.\nThe chapter structure to the left illustrates the organization of the site. Each page aims to identify and address important topics in the process of analyzing quantitative data. This includes explanation, advice, and links to resources where available and appropriate.\nThese pages are works in progress. I aim for them to evolve to meet your needs. I will continue to edit them as I see fit; and if something is missing, please don’t hesitate to reach out to me: jack.bernard.huber@gmail.com.",
     "crumbs": [
-      "Purpose of this Site"
+      "Introduction"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "",
     "text": "This site was built in R (R Core Team 2022) with Quarto (Allaire 2022).↩︎",
     "crumbs": [
-      "Purpose of this Site"
+      "Introduction"
     ]
   },
   {
