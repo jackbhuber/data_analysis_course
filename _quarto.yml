@@ -7,6 +7,8 @@ book:
   author: "Jack B. Huber, Ph.D."
   date: last-modified
   page-navigation: false
+  page-footer: 
+    center: "Built in R with Quarto" 
   chapters:
     - index.qmd
     - part: prep.qmd

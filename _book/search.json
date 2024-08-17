@@ -4,17 +4,7 @@
     "href": "index.html",
     "title": "Data Analysis for Problems of Practice",
     "section": "",
-    "text": "Introduction\nThe purpose of this site1 is to offer targeted advice and resources to help you analyze the quantitative data you have collected for your capstone project. It is an adaptation of a similar project to support pharmacy resident students with medical research project but much of the advice and information applies equally well to educational research.\nThe chapter structure to the left illustrates the organization of the site. Each page aims to identify and address important topics in the process of analyzing quantitative data. This includes explanation, advice, and links to resources where available and appropriate.\nThese pages are works in progress. I aim for them to evolve to meet your needs. I will continue to edit them as I see fit; and if something is missing, please don’t hesitate to reach out to me: jack.bernard.huber@gmail.com.",
-    "crumbs": [
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "Data Analysis for Problems of Practice",
-    "section": "",
-    "text": "I built this site in R (R Core Team 2022) with Quarto (Allaire 2022).↩︎",
+    "text": "Introduction\nThe purpose of this site is to offer targeted advice and resources to help you analyze the quantitative data you have collected for your capstone project. It is an adaptation of a similar project to support pharmacy resident students with medical research project but much of the advice and information applies equally well to educational research.\nThe chapter structure to the left illustrates the organization of the site. Each page aims to identify and address important topics in the process of analyzing quantitative data. This includes explanation, advice, and links to resources where available and appropriate.\nThese pages are works in progress. I aim for them to evolve to meet your needs. I will continue to edit them as I see fit; and if something is missing, please don’t hesitate to reach out to me: jack.bernard.huber@gmail.com.",
     "crumbs": [
       "Introduction"
     ]
@@ -299,7 +289,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Allaire, JJ. 2022. R Interface to ’Quarto’ Markdown Publishing\nSystem. https://cran.r-project.org/web/packages/quarto/quarto.pdf.\n\n\nDe Muth, James E. 2009. “Overview of Biostatistics Used in\nClinical Research.” American Journal of Health-System\nPharmacy 66: 70–81.\n\n\nMiller, Daryl, Melissa Ramsey, Timothy R. L’Hommedieu, and Lauren\nVerbosky. 2020. “Pharmacist-Led Transitions-of-Care Program\nReduces 30-Day Readmission Rates for Medicare Patients in a Large Health\nSystem.” American Journal of Health-System Pharmacy 77:\n972–78.\n\n\nR Core Team. 2022. R: A Language and Environment for Statistical\nComputing. Vienna, Austria: R Foundation for Statistical Computing.\nhttps://www.R-project.org/.\n\n\nSimpson, Scot. 2015. “Creating a Data Analysis Plan: What to\nConsider When Choosing Statistics for a Study.” Canadian\nJournal of Hospital Pharmacy 68 (4): 311–17.\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of\nStatistical Software 59 (10). https://www.jstatsoft.org/article/view/v059i10.",
+    "text": "De Muth, James E. 2009. “Overview of Biostatistics Used in\nClinical Research.” American Journal of Health-System\nPharmacy 66: 70–81.\n\n\nMiller, Daryl, Melissa Ramsey, Timothy R. L’Hommedieu, and Lauren\nVerbosky. 2020. “Pharmacist-Led Transitions-of-Care Program\nReduces 30-Day Readmission Rates for Medicare Patients in a Large Health\nSystem.” American Journal of Health-System Pharmacy 77:\n972–78.\n\n\nSimpson, Scot. 2015. “Creating a Data Analysis Plan: What to\nConsider When Choosing Statistics for a Study.” Canadian\nJournal of Hospital Pharmacy 68 (4): 311–17.\n\n\nWickham, Hadley. 2014. “Tidy Data.” Journal of\nStatistical Software 59 (10). https://www.jstatsoft.org/article/view/v059i10.",
     "crumbs": [
       "References"
     ]

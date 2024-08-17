@@ -1,9 +1,7 @@
 # Introduction {.unnumbered}
 
-The purpose of this site[^index-1] is to offer targeted advice and resources to help you analyze the quantitative data you have collected for your capstone project. It is an adaptation of a similar project to support pharmacy resident students with medical research project but much of the advice and information applies equally well to educational research.
+The purpose of this site is to offer targeted advice and resources to help you analyze the quantitative data you have collected for your capstone project. It is an adaptation of a similar project to support pharmacy resident students with medical research project but much of the advice and information applies equally well to educational research.
 
 The chapter structure to the left illustrates the organization of the site. Each page aims to identify and address important topics in the process of analyzing quantitative data. This includes explanation, advice, and links to resources where available and appropriate.
 
 These pages are works in progress. I aim for them to evolve to meet your needs. I will continue to edit them as I see fit; and if something is missing, please don't hesitate to reach out to me: [jack.bernard.huber\@gmail.com](mailto:jack.bernard.huber@gmail.com).
-
-[^index-1]: I built this site in `R` [@R-base] with `Quarto` [@R-quarto].
