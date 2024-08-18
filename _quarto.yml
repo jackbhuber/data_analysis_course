@@ -36,7 +36,11 @@ book:
   navbar: 
     background: navy
     foreground: white
-  site-url: https://data_analysis.jackhuber.org
+    right:
+      - icon: house
+        text: "Home"
+        href: https://jackhuber.org
+    site-url: https://data_analysis.jackhuber.org
 
 bibliography: references.bib
 
